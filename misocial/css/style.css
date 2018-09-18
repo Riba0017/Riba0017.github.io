@@ -1,0 +1,472 @@
+@import "normalize.css";
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+header,
+.inner-wrapper {
+    min-height: 100vh;
+    /*min-height: 600px;*/
+}
+
+header {
+    background: url(../img/header-bg.png) center no-repeat,
+                linear-gradient(-90deg, rgb(136, 211, 206) 10%, rgb(110, 69, 226) 100%);
+    background-size: cover;
+}
+
+.inner-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header,
+.footer-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 20vh;
+}
+
+.logo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-naming {
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 1.9em;
+    line-height: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.footer-nav .logo .logo-naming {
+    color: #000000;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.menu-list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+}
+
+.menu-item a {
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.2em;
+    color: #ffffff;
+}
+
+.footer-nav .menu-item a {
+    color: #6a6a77;
+}
+
+.footer-nav .menu-item:first-of-type a {
+    color: #756edc;
+}
+
+.footer-nav .menu-item:last-of-type a {
+    color: #ffffff;
+}
+
+.button {
+    padding: 15px 32px;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-nav .button {
+    background-color: #6e45e2;
+    border-color: #6e45e2;
+}
+
+.menu-link {
+    display: none;
+    width: 5vh;
+    height: 5vh;
+    margin-right: 20px;
+    background: url("../img/burger-img.png") no-repeat;
+}
+
+.main-content {
+    color: #ffffff;
+    text-align: center;
+}
+
+.main-content span,
+.table-header span,
+.footer-header span {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    font-weight: bold;
+    line-height: 2em;
+}
+
+.main-content span::before,
+.table-header span::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.main-content span::after,
+.table-header span::after {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.main-content span::before,
+.main-content span::after {
+    background-color: #ffffff;
+}
+
+.table-header span::before,
+.table-header span::after {
+    background-color: #6e45e2;
+}
+
+.main-content h1 {
+    margin: 35px 0;
+    font-size: 5.2em;
+    line-height: 1em;
+}
+
+p {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.7em;
+}
+
+.down-arrow {
+    display: block;
+    margin-bottom: 50px;
+    width: 10vh;
+    height: 10vh;
+    background: #ffffff url(../img/down-arrow.png) center no-repeat;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+}
+
+.down-arrow:hover {
+    box-shadow: 0 0 40px 10px rgba(204, 204, 223, 0.51);
+    transition: 0.5s;
+}
+
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 120vh;
+    padding: 50px 0;
+    background-color: #f9fafc;
+}
+
+.table-header {
+    text-align: center;
+}
+
+.table-header span {
+    color: #a8adb6;
+}
+
+.table-header h2,
+.footer-header h2 {
+    margin: 0;
+    font-size: 4em;
+    line-height: 72px;
+    color: #4f4f6f;
+}
+
+.table-header p,
+.table-card p {
+    color: #b6bac2;
+}
+
+.table-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 80%;
+    /*margin-bottom: 40px;*/
+}
+
+.table-card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 440px;
+    max-height: 650px;
+    margin: 10px;
+    padding: 3%;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #d6dae7;
+    border-radius: 35px;
+}
+
+.table-card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 70px 10px rgba(204, 204, 223, 0.71);
+    transition: 0.9s;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-size: 0.875em;
+    line-height: 2em;
+    text-transform: uppercase;
+    color: #9fa4af;
+}
+
+.price span {
+    color: #4f4f6f;
+}
+
+.num {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 60px;
+    line-height: 50px;
+}
+
+.price span:first-of-type {
+    display: inline-block;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+.card-icon {
+    display: block;
+    margin: 0 auto 10%;
+}
+
+.select-button {
+    margin-top: 10px;
+    padding: 7px 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.75em;
+    line-height: 2em;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #c2c9db;
+    background-color: #ffffff;
+    border: 1px solid #d7dbe8;
+    border-radius: 100px;
+    box-shadow: 0 0 20px 5px rgba(204, 204, 223, 0.31);
+}
+
+.table-card:hover .select-button {
+    background-color: #6e45e2;
+    box-shadow: none;
+    border-color: #6e45e2;
+    color: #ffffff;
+    transition: 0.9s;
+}
+
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 60vh;
+    min-height: 300px;
+    width: 100%;
+    padding: 15vh 0;
+    background: url("../img/Map.png") center no-repeat,
+                linear-gradient(-90deg, rgb(136, 211, 206) 10%, rgb(110, 69, 226) 100%);
+    background-size: cover;
+    color: #ffffff;
+}
+
+.footer-header h2 {
+    color: #ffffff;
+}
+
+.footer-nav {
+    margin: auto;
+    border-bottom: 1px solid #b6bac2;
+}
+
+.copyright {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 95%;
+}
+
+.copyright p {
+    display: inline-block;
+    color: #b6bac2;
+}
+
+.button-start,
+.button-more {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 15px 32px;
+    border: 1px solid #ffffff;
+    border-radius: 100px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #9fa4af;
+}
+
+.button-start:hover,
+.button-more:hover,
+.button:hover {
+    background-color: #6e45e2;
+    border-color: #6e45e2;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.social-buttons a {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+    font-size: 0;
+    text-decoration: none;
+}
+
+.social-buttons a:first-of-type {
+    background: 5px 0 url("../img/social-sprite.png") no-repeat;
+}
+
+.social-buttons a:nth-of-type(2) {
+    background: -23px 0 url("../img/social-sprite.png") no-repeat;
+}
+
+.social-buttons a:nth-of-type(3) {
+    background: -54px -1px url("../img/social-sprite.png") no-repeat;
+}
+
+.social-buttons a:last-of-type {
+    background: -91px -1.5px url("../img/social-sprite.png") no-repeat;
+}
+
+.mob-nav {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    text-align: center;
+}
+
+.mob-list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #33cccc;
+    opacity: 0.85;
+    list-style: none;
+    font-size: 4em;
+}
+
+.mob-item {
+    padding: 10px 0;
+}
+
+.mob-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+
+@media screen and (max-width: 1199px) {
+    body {
+        font-size: 14px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-link,
+    .mob-nav {
+        display: block;
+    }
+}
+
+
+@media screen and (min-width: 456px) and (max-width: 991px) {
+    body {
+        font-size: 12px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-link {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
