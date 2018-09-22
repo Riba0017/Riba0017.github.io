@@ -78,6 +78,10 @@ header {
     color: #ffffff;
 }
 
+.menu-item a:hover {
+    text-decoration: underline;
+}
+
 .footer-nav .menu-item a {
     color: #6a6a77;
 }
@@ -96,6 +100,10 @@ header {
     border-radius: 100px;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.button a:hover {
+    text-decoration: none;
 }
 
 .footer-nav .button {
@@ -427,6 +435,14 @@ footer {
     font-weight: bold;
 }
 
+.closed-nav,
+.footer-close {
+    display: none;
+}
+
+.open-nav {
+    display: block;
+}
 
 
 @media screen and (max-width: 1199px) {
@@ -438,10 +454,10 @@ footer {
         display: none;
     }
 
-    .menu-link,
-    .mob-nav {
-        display: block;
-    }
+    /*.menu-link,*/
+    /*.mob-nav {*/
+        /*display: block;*/
+    /*}*/
 }
 
 
