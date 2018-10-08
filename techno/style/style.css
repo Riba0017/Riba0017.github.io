@@ -12,6 +12,11 @@ header {
     background-size: cover;
 }
 
+.blog {
+    background: #000 url("../img/apiary-bg.jpg") no-repeat;
+    background-size: cover;
+}
+
 .main-nav {
     display: flex;
     flex-flow: row nowrap;
