@@ -29,7 +29,7 @@
             s.async = true;
             s.src = "https://mc.yandex.ru/metrika/tag.js";
 
-            if (w.opera === "[object Opera]") {
+            if (w.opera == "[object Opera]") {
                 d.addEventListener("DOMContentLoaded", f, false);
             } else { f(); }
         })(document, window, "yandex_metrika_callbacks2");
@@ -40,7 +40,9 @@
 <body>
 <header class="no-bg">
     <nav class="main-nav">
-        <div class="main-logo"></div>
+        <div class="main-logo">
+            <img src="img/logo-1.png" alt="main-logo" height="219" width="603">
+        </div>
         <ul>
             <li class="menu-item"><a href="index.html">Главная</a></li>
             <li class="menu-item"><a href="blog.html">Блог</a></li>
