@@ -454,10 +454,10 @@ footer {
         display: none;
     }
 
-    /*.menu-link,*/
-    /*.mob-nav {*/
-        /*display: block;*/
-    /*}*/
+    .menu-link {
+        display: block;
+    }
+
 }
 
 
@@ -473,6 +473,7 @@ footer {
     .menu-link {
         display: block;
     }
+
 }
 
 
