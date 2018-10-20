@@ -56,13 +56,15 @@ header {
     color: #000000;
 }
 
-.main-nav {
+.main-nav,
+.fo-main-nav {
     display: flex;
     justify-content: space-between;
     width: 60%;
 }
 
-.menu-list {
+.menu-list,
+.fo-menu-list {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -71,26 +73,31 @@ header {
     list-style: none;
 }
 
-.menu-item a {
+.menu-item a,
+.fo-menu-item a {
     text-decoration: none;
     font-size: 1em;
     line-height: 1.2em;
+}
+
+.menu-item a {
     color: #ffffff;
 }
 
-.menu-item a:hover {
-    text-decoration: underline;
-}
-
-.footer-nav .menu-item a {
+.fo-menu-item a {
     color: #6a6a77;
 }
 
-.footer-nav .menu-item:first-of-type a {
+.menu-item a:hover,
+.fo-menu-item a:hover {
+    text-decoration: underline;
+}
+
+.fo-menu-item:first-of-type a {
     color: #756edc;
 }
 
-.footer-nav .menu-item:last-of-type a {
+.fo-menu-item:last-of-type a {
     color: #ffffff;
 }
 
@@ -113,8 +120,8 @@ header {
 
 .menu-link {
     display: none;
-    width: 5vh;
-    height: 5vh;
+    width: 6vh;
+    height: 6vh;
     margin-right: 20px;
     background: url("../img/burger-img.png") no-repeat;
 }
@@ -435,11 +442,6 @@ footer {
     font-weight: bold;
 }
 
-.closed-nav,
-.footer-close {
-    display: none;
-}
-
 .open-nav {
     display: block;
 }
@@ -450,7 +452,8 @@ footer {
         font-size: 14px;
     }
 
-    .main-nav {
+    .main-nav,
+    .fo-main-nav {
         display: none;
     }
 
@@ -466,7 +469,8 @@ footer {
         font-size: 12px;
     }
 
-    .main-nav {
+    .main-nav,
+    .fo-main-nav {
         display: none;
     }
 
