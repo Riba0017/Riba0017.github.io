@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MarketPlace</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <!--HEADER-->
+    <header>
+        <div class="top-bar">
+                <div class="container">
+                    <div class="burger-button"></div>
+                    <div class="logo">
+                        <a href="#">ЛОГОТИП</a>
+                    </div>
+                    <div class="top-info">
+                        <span class="phone-number">8 800 777 50 50</span>
+                        <label class="search-label">
+                            <input type="search" class="search-field" name="search-field"
+                                   placeholder="Поиск товаров" autocomplete="off">
+                        </label>
+                        <a href="#" class="delivery">Доставка и оплата</a>
+                        <div class="basket small">
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <nav class="menu">
+            <div class="container">
+                <ul class="menu-list">
+                    <li class="menu-item active"><a href="index.html">Мобильные телефоны</a></li>
+                    <li class="menu-item"><a href="index.html">Планшеты</a></li>
+                    <li class="menu-item"><a href="index.html">Фототехника</a></li>
+                    <li class="menu-item"><a href="index.html">Ноутбуки</a></li>
+                    <li class="menu-item"><a href="index.html">Телевизоры</a></li>
+                </ul>
+                <div class="basket">
+                    <a href="#">Корзина</a>
+                </div>
+            </div>
+            <div class="filter-small"></div>
+        </nav>
+    </header>
+    <!--MAIN CONTENT-->
+    <main>
+        <div class="container">
+            <div>
+                <form target="#" class="filter close">
+                    <div class="close-button"></div>
+                    <div class="container">
+                    <div class="type-block">
+                            <label>
+                                <select id="logotype" name="logotype">
+                                    <option value="any">Любого логотипа</option>
+                                    <option value="compact">Компакт-камера</option>
+                                    <option value="mirrorless">Беззеркальная</option>
+                                    <option value="mirror">Зеркальная</option>
+                                    <option value="medium">Среднеформатная</option>
+                                </select>
+                            </label>
+                            <label>
+                                <select id="brand" name="brand">
+                                    <option value="any">Любого бренда</option>
+                                    <option value="canon">Canon</option>
+                                    <option value="nikon">Nikon</option>
+                                    <option value="sony">Sony</option>
+                                    <option value="fujifilm">Fujifilm</option>
+                                    <option value="samsung">Samsung</option>
+                                    <option value="olympus">Olympus</option>
+                                </select>
+                            </label>
+                        </div>
+                    <div class="price-block">
+                        <span>по цене</span>
+                        <label for="min" class="min-label">от</label>
+                        <label for="max" class="max-label">до</label>
+                        <input id="min" type="number" min="0" name="min" class="input-number"><!--
+                        --><input id="max" type="number" min="0" name="max" class="input-number">
+                        <span>рублей</span>
+                        </div>
+                    <button class="filter-button" type="submit">Применить</button>
+                </div>
+                </form>
+            </div>
+            <!--CATALOG-->
+            <div class="catalog">
+                <div class="catalog-item promo-item">
+                        <img class="item-image" src="img/photo_camera_PNG7845.png" alt="Фотокамера EOS 5D Mark II">
+                        <div class="content">
+                            <div class="item-content">
+                                <h2 class="item-heading">Canon EOS 5D Mark III Body</h2>
+                                <p class="short-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                    для опытных любителей.</p>
+                                <p class="full-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                    для опытных любителей, профессиональных фотографов и видеооператоров.
+                                    Преемник успешной модели EOS 5D Mark II. Фотоаппарат имеет 22.3 Мп.
+                                    CMOS-сенсор размером 36 х 24 мм, 14-битный процессор DIGIC 5+,
+                                    61-точечный автофокус.</p>
+                            </div>
+                            <div class="price-section">
+                                <div class="old-price">
+                                    <span class="price">4&nbsp;400</span>
+                                    <span class="currency">руб.</span>
+                                </div>
+                                <div class="current-price">
+                                    <span class="price">3&nbsp;200</span>
+                                    <span class="currency">руб.</span>
+                                </div>
+                                <a href="#" class="item-basket"></a>
+                            </div>
+                        </div>
+                    </div>
+                <div class="catalog-item">
+                <img class="item-image" src="img/photo_camera_PNG7845.png" alt="Фотокамера EOS 5D Mark II">
+                <div class="content">
+                    <div class="item-content">
+                        <h2 class="item-heading">Canon EOS 5D Mark III Body</h2>
+                        <p class="short-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                            для опытных любителей.</p>
+                        <p class="full-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                            для опытных любителей, профессиональных фотографов и видеооператоров.
+                            Преемник успешной модели EOS 5D Mark II. Фотоаппарат имеет 22.3 Мп.
+                            CMOS-сенсор размером 36 х 24 мм, 14-битный процессор DIGIC 5+,
+                            61-точечный автофокус.</p>
+                    </div>
+                    <div class="price-section">
+                        <div class="old-price">
+                            <span class="price">4&nbsp;400</span>
+                            <span class="currency">руб.</span>
+                        </div>
+                        <div class="current-price">
+                            <span class="price">3&nbsp;200</span>
+                            <span class="currency">руб.</span>
+                        </div>
+                        <a href="#" class="item-basket"></a>
+                    </div>
+                </div>
+            </div>
+                <div class="catalog-item">
+                    <img class="item-image" src="img/photo_camera_PNG7845.png" alt="Фотокамера EOS 5D Mark II">
+                    <div class="content">
+                        <div class="item-content">
+                            <h2 class="item-heading">Canon EOS 5D Mark III Body</h2>
+                            <p class="short-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей.</p>
+                            <p class="full-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей, профессиональных фотографов и видеооператоров.
+                                Преемник успешной модели EOS 5D Mark II. Фотоаппарат имеет 22.3 Мп.
+                                CMOS-сенсор размером 36 х 24 мм, 14-битный процессор DIGIC 5+,
+                                61-точечный автофокус.</p>
+                        </div>
+                        <div class="price-section">
+                            <div class="old-price">
+                                <span class="price">4&nbsp;400</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <div class="current-price">
+                                <span class="price">3&nbsp;200</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <a href="#" class="item-basket"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img class="item-image" src="img/photo_camera_PNG7845.png" alt="Фотокамера EOS 5D Mark II">
+                    <div class="content">
+                        <div class="item-content">
+                            <h2 class="item-heading">Canon EOS 5D Mark III Body</h2>
+                            <p class="short-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей.</p>
+                            <p class="full-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей, профессиональных фотографов и видеооператоров.
+                                Преемник успешной модели EOS 5D Mark II. Фотоаппарат имеет 22.3 Мп.
+                                CMOS-сенсор размером 36 х 24 мм, 14-битный процессор DIGIC 5+,
+                                61-точечный автофокус.</p>
+                        </div>
+                        <div class="price-section">
+                            <div class="old-price">
+                                <span class="price">4&nbsp;400</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <div class="current-price">
+                                <span class="price">3&nbsp;200</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <a href="#" class="item-basket"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img class="item-image" src="img/photo_camera_PNG7845.png" alt="Фотокамера EOS 5D Mark II">
+                    <div class="content">
+                        <div class="item-content">
+                            <h2 class="item-heading">Canon EOS 5D Mark III Body</h2>
+                            <p class="short-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей.</p>
+                            <p class="full-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей, профессиональных фотографов и видеооператоров.
+                                Преемник успешной модели EOS 5D Mark II. Фотоаппарат имеет 22.3 Мп.
+                                CMOS-сенсор размером 36 х 24 мм, 14-битный процессор DIGIC 5+,
+                                61-точечный автофокус.</p>
+                        </div>
+                        <div class="price-section">
+                            <div class="old-price">
+                                <span class="price">4&nbsp;400</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <div class="current-price">
+                                <span class="price">3&nbsp;200</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <a href="#" class="item-basket"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img class="item-image" src="img/photo_camera_PNG7845.png" alt="Фотокамера EOS 5D Mark II">
+                    <div class="content">
+                        <div class="item-content">
+                            <h2 class="item-heading">Canon EOS 5D Mark III Body</h2>
+                            <p class="short-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей.</p>
+                            <p class="full-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей, профессиональных фотографов и видеооператоров.
+                                Преемник успешной модели EOS 5D Mark II. Фотоаппарат имеет 22.3 Мп.
+                                CMOS-сенсор размером 36 х 24 мм, 14-битный процессор DIGIC 5+,
+                                61-точечный автофокус.</p>
+                        </div>
+                        <div class="price-section">
+                            <div class="old-price">
+                                <span class="price">4&nbsp;400</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <div class="current-price">
+                                <span class="price">3&nbsp;200</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <a href="#" class="item-basket"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img class="item-image" src="img/photo_camera_PNG7845.png" alt="Фотокамера EOS 5D Mark II">
+                    <div class="content">
+                        <div class="item-content">
+                            <h2 class="item-heading">Canon EOS 5D Mark III Body</h2>
+                            <p class="short-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей.</p>
+                            <p class="full-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей, профессиональных фотографов и видеооператоров.
+                                Преемник успешной модели EOS 5D Mark II. Фотоаппарат имеет 22.3 Мп.
+                                CMOS-сенсор размером 36 х 24 мм, 14-битный процессор DIGIC 5+,
+                                61-точечный автофокус.</p>
+                        </div>
+                        <div class="price-section">
+                            <div class="old-price">
+                                <span class="price">4&nbsp;400</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <div class="current-price">
+                                <span class="price">3&nbsp;200</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <a href="#" class="item-basket"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img class="item-image" src="img/photo_camera_PNG7845.png" alt="Фотокамера EOS 5D Mark II">
+                    <div class="content">
+                        <div class="item-content">
+                            <h2 class="item-heading">Canon EOS 5D Mark III Body</h2>
+                            <p class="short-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей.</p>
+                            <p class="full-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей, профессиональных фотографов и видеооператоров.
+                                Преемник успешной модели EOS 5D Mark II. Фотоаппарат имеет 22.3 Мп.
+                                CMOS-сенсор размером 36 х 24 мм, 14-битный процессор DIGIC 5+,
+                                61-точечный автофокус.</p>
+                        </div>
+                        <div class="price-section">
+                            <div class="old-price">
+                                <span class="price">4&nbsp;400</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <div class="current-price">
+                                <span class="price">3&nbsp;200</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <a href="#" class="item-basket"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img class="item-image" src="img/photo_camera_PNG7845.png" alt="Фотокамера EOS 5D Mark II">
+                    <div class="content">
+                        <div class="item-content">
+                            <h2 class="item-heading">Canon EOS 5D Mark III Body</h2>
+                            <p class="short-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей.</p>
+                            <p class="full-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей, профессиональных фотографов и видеооператоров.
+                                Преемник успешной модели EOS 5D Mark II. Фотоаппарат имеет 22.3 Мп.
+                                CMOS-сенсор размером 36 х 24 мм, 14-битный процессор DIGIC 5+,
+                                61-точечный автофокус.</p>
+                        </div>
+                        <div class="price-section">
+                            <div class="old-price">
+                                <span class="price">4&nbsp;400</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <div class="current-price">
+                                <span class="price">3&nbsp;200</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <a href="#" class="item-basket"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img class="item-image" src="img/photo_camera_PNG7845.png" alt="Фотокамера EOS 5D Mark II">
+                    <div class="content">
+                        <div class="item-content">
+                            <h2 class="item-heading">Canon EOS 5D Mark III Body</h2>
+                            <p class="short-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей.</p>
+                            <p class="full-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей, профессиональных фотографов и видеооператоров.
+                                Преемник успешной модели EOS 5D Mark II. Фотоаппарат имеет 22.3 Мп.
+                                CMOS-сенсор размером 36 х 24 мм, 14-битный процессор DIGIC 5+,
+                                61-точечный автофокус.</p>
+                        </div>
+                        <div class="price-section">
+                            <div class="old-price">
+                                <span class="price">4&nbsp;400</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <div class="current-price">
+                                <span class="price">3&nbsp;200</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <a href="#" class="item-basket"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <img class="item-image" src="img/photo_camera_PNG7845.png" alt="Фотокамера EOS 5D Mark II">
+                    <div class="content">
+                        <div class="item-content">
+                            <h2 class="item-heading">Canon EOS 5D Mark III Body</h2>
+                            <p class="short-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей.</p>
+                            <p class="full-desc">Полнокадровая цифровая зеркальная камера, предназначенная
+                                для опытных любителей, профессиональных фотографов и видеооператоров.
+                                Преемник успешной модели EOS 5D Mark II. Фотоаппарат имеет 22.3 Мп.
+                                CMOS-сенсор размером 36 х 24 мм, 14-битный процессор DIGIC 5+,
+                                61-точечный автофокус.</p>
+                        </div>
+                        <div class="price-section">
+                            <div class="old-price">
+                                <span class="price">4&nbsp;400</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <div class="current-price">
+                                <span class="price">3&nbsp;200</span>
+                                <span class="currency">руб.</span>
+                            </div>
+                            <a href="#" class="item-basket"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--FOOTER-->
+    <footer></footer>
+</body>
+</html>
