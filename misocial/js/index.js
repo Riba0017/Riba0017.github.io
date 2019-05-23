@@ -15,10 +15,4 @@ $(document).ready(() => {
         $('.menu-nav').removeClass('open-nav');
     });
 
-
-
-
-
-
-
 });
