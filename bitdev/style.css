@@ -6,6 +6,7 @@
 
 :root {
     --menu-width: 150px;
+    --menu-transition: -100px;
 }
 
 body {
@@ -13,15 +14,20 @@ body {
     flex-flow: column nowrap;
     min-height: 100vh;
     font: 16px 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
-header,
-footer {
+header {
     flex: 0 1 auto;
 }
 
 header {
     min-height: 65px;
+    z-index: 10;
+}
+
+main p {
+    padding: 10px;
 }
 
 .inner-header {
@@ -43,6 +49,8 @@ main {
     flex: 1 0 auto;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
 .inner-menu,
@@ -61,6 +69,11 @@ main {
     left: 0;
 }
 
+.content {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
 .main-content {
     flex-grow: 1;
     display: flex;
@@ -69,24 +82,123 @@ main {
 }
 
 .extra-content {
-    min-width: calc(40% - var(--menu-width));
-    /*height: 100vh;*/
+    min-width: 40%;
     background-color: #cc5400;
 }
 
 .inner-extra {
-    width: calc(40% - var(--menu-width));
+    width: calc((100% - var(--menu-width)) * 0.4);
     right: 0;
 }
 
 .animate-block {
+
     width: 300px;
     height: 300px;
     margin: 10px auto;
-    background: url('img/night.jpg') no-repeat;
 }
 
-#map {
-    width: 100%;
-    height: 25vh;
+.block-item {
+    transition: transform 1.5s linear 0s;
+}
+
+.block-item.left {
+    transform: translate(-500%);
+}
+
+.block-item.right {
+    transform: translate(500%);
+}
+
+.menu-button::before {
+    transform: rotate(-45deg);
+}
+
+.menu-button::after {
+    transform: rotate(45deg);
+}
+
+
+@media (max-width: 768px) {
+    main {
+        min-width: calc(100% - var(--menu-transition));
+        transition: transform 0.5s linear 0s;
+        transform: translate(var(--menu-transition));
+    }
+
+    .transition {
+        transform: translate(0px);
+    }
+
+    .content {
+        flex-flow: column nowrap;
+    }
+
+    .inner-extra {
+        position: relative;
+    }
+
+    .menu-button {
+        width: 30px;
+        height: 30px;
+        margin: 10px 10px 0 auto;
+        background: red;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    /*-----------BURGER-BUTTON-----------*/
+
+    .button-container {
+        height: 40px;
+        padding-top: 20px;
+    }
+
+    .burger-button {
+        position: relative;
+        margin: 0 10px 0 auto;
+    }
+
+    .burger-button,
+    .burger-button::before,
+    .burger-button::after {
+        width: 30px;
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .burger-button::before,
+    .burger-button::after {
+        content: " ";
+        position: absolute;
+        transform: rotate(0deg);
+        transition: transform 0.2s linear 0s;
+    }
+
+    .burger-button::before {
+        top: -8px;
+    }
+
+    .burger-button::after {
+        top: 8px;
+    }
+
+    .close.burger-button::before {
+        top: 0;
+        transform: rotate(-45deg);
+        transition: transform 0.2s linear 0s;
+    }
+
+    .close.burger-button::after{
+        top: 0;
+        transform: rotate(45deg);
+        transition: transform 0.2s linear 0s;
+    }
+
+    .close.burger-button {
+        background: transparent;
+    }
+
 }

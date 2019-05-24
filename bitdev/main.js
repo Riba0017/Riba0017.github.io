@@ -1,7 +1,7 @@
-// Получаем нужный элемент
-let element = document.querySelector('div[data-id]');
+let arr = document.getElementsByClassName('animate-block');
 
 let Visible = function (target) {
+    let innerElem = target.querySelector('.block-item');
     // Все позиции элемента
     let targetPosition = {
             top: window.pageYOffset + target.getBoundingClientRect().top,
@@ -26,19 +26,32 @@ let Visible = function (target) {
         targetPosition.left < windowPosition.right) {
         // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
         // Если элемент полностью видно, то запускаем следующий код
-        console.log('Вы видите элемент: )' + element.dataset.id);
+        innerElem.style.transform = 'translate(0px)';
 
-    } else {
-        // Если элемент не видно, то запускаем этот код
-        // console.clear();
+    }
+};
 
+let showImmediately = function (arr) {
+    for(let i = 0; i < arr.length; i++) {
+        Visible (arr[i]);
     }
 };
 
 // Запускаем функцию при прокрутке страницы
 window.addEventListener('scroll', function() {
-    Visible (element);
+    showImmediately(arr);
 });
 
-// А также запустим функцию сразу. А то вдруг, элемент изначально видно
-Visible (element);
+// А также запустим функцию сразу, если элемент изначально видно
+window.addEventListener('DOMContentLoaded', () => {
+    showImmediately(arr);
+});
+
+let main = document.getElementsByTagName('main')[0];
+let buttonContainer = document.querySelector('.button-container');
+let burgerBtn = document.querySelector('.burger-button');
+
+buttonContainer.addEventListener('click', () => {
+    burgerBtn.classList.toggle('close');
+    main.classList.toggle('transition');
+});
