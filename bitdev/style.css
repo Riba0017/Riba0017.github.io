@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 
+/*переменные */
 :root {
     --menu-width: 150px;
     --menu-transition: -100px;
+    --header-height: 65px;
 }
 
 body {
@@ -19,15 +21,8 @@ body {
 
 header {
     flex: 0 1 auto;
-}
-
-header {
-    min-height: 65px;
+    min-height: var(--header-height);
     z-index: 10;
-}
-
-main p {
-    padding: 10px;
 }
 
 .inner-header {
@@ -49,29 +44,28 @@ main {
     flex: 1 0 auto;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     overflow: hidden;
 }
 
-.inner-menu,
-.inner-extra {
-    height: 100%;
-    position: fixed;
+main p {
+    padding: 10px;
 }
 
 .main-menu {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    bottom: 0;
+    z-index: 10;
     min-width: var(--menu-width);
     background-color: #0f7595;
-}
-
-.inner-menu {
-    width: var(--menu-width);
-    left: 0;
 }
 
 .content {
     display: flex;
     flex-flow: row nowrap;
+    width: calc(100% - var(--menu-width));
 }
 
 .main-content {
@@ -79,35 +73,38 @@ main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    max-width: 60%;
 }
 
 .extra-content {
-    min-width: 40%;
-    background-color: #cc5400;
-}
-
-.inner-extra {
     width: calc((100% - var(--menu-width)) * 0.4);
+    background-color: #cc5400;
+    position: fixed;
+    top: var(--header-height);
     right: 0;
+    bottom: 0;
+    z-index: 10;
 }
 
 .animate-block {
-
     width: 300px;
     height: 300px;
     margin: 10px auto;
 }
 
 .block-item {
-    transition: transform 1.5s linear 0s;
+    transition: transform 1.5s linear 0s,
+                opacity 1.5s linear 0s;
 }
 
 .block-item.left {
-    transform: translate(-500%);
+    transform: translate(-100%);
+    opacity: 0;
 }
 
 .block-item.right {
-    transform: translate(500%);
+    transform: translate(100%);
+    opacity: 0;
 }
 
 .menu-button::before {
@@ -122,38 +119,35 @@ main {
 @media (max-width: 768px) {
     main {
         min-width: calc(100% - var(--menu-transition));
+    }
+
+    .main-menu {
         transition: transform 0.5s linear 0s;
         transform: translate(var(--menu-transition));
     }
 
-    .transition {
-        transform: translate(0px);
-    }
-
     .content {
         flex-flow: column nowrap;
+        transition: transform 0.5s linear 0s;
+        transform: translate(var(--menu-transition));
     }
 
-    .inner-extra {
-        position: relative;
+    .main-content {
+        max-width: 100%;
     }
 
-    .menu-button {
-        width: 30px;
-        height: 30px;
-        margin: 10px 10px 0 auto;
-        background: red;
+    .extra-content {
+        position: static;
+        width: 100%;
     }
 
-    .menu-button {
-        display: block;
-    }
-
-    /*-----------BURGER-BUTTON-----------*/
+/*-----------BURGER-BUTTON-----------*/
 
     .button-container {
         height: 40px;
         padding-top: 20px;
+        position: fixed;
+        left: 110px;
     }
 
     .burger-button {
@@ -201,4 +195,7 @@ main {
         background: transparent;
     }
 
+    .transition {
+        transform: translate(0px);
+    }
 }

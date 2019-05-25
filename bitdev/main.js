@@ -1,4 +1,4 @@
-let arr = document.getElementsByClassName('animate-block');
+let arrOfBlocks = document.getElementsByClassName('animate-block');
 
 let Visible = function (target) {
     let innerElem = target.querySelector('.block-item');
@@ -27,6 +27,7 @@ let Visible = function (target) {
         // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
         // Если элемент полностью видно, то запускаем следующий код
         innerElem.style.transform = 'translate(0px)';
+        innerElem.style.opacity = '1';
 
     }
 };
@@ -39,19 +40,33 @@ let showImmediately = function (arr) {
 
 // Запускаем функцию при прокрутке страницы
 window.addEventListener('scroll', function() {
-    showImmediately(arr);
+    showImmediately(arrOfBlocks);
 });
 
 // А также запустим функцию сразу, если элемент изначально видно
 window.addEventListener('DOMContentLoaded', () => {
-    showImmediately(arr);
+    showImmediately(arrOfBlocks);
 });
 
-let main = document.getElementsByTagName('main')[0];
+//Работа с кнопкой-бургером и левым меню
+let mainMenu = document.querySelector('.main-menu');
+let mainContent = document.querySelector('.content');
 let buttonContainer = document.querySelector('.button-container');
 let burgerBtn = document.querySelector('.burger-button');
 
-buttonContainer.addEventListener('click', () => {
-    burgerBtn.classList.toggle('close');
-    main.classList.toggle('transition');
-});
+if ('ontouchstart' in window) {
+    buttonContainer.addEventListener('touched', () => {
+        burgerBtn.classList.toggle('close');
+        mainMenu.classList.toggle('transition');
+        mainContent.classList.toggle('transition');
+    });
+}
+    buttonContainer.addEventListener('click', () => {
+        burgerBtn.classList.toggle('close');
+        mainMenu.classList.toggle('transition');
+        mainContent.classList.toggle('transition');
+    });
+
+
+
+
