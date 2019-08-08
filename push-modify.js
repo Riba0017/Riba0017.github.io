@@ -54,7 +54,7 @@ function pushNotificationsReminder() {
 
     // создание таймера отсрочки на Х секунд
     $remindBtn.on('click', function() {
-        var userStatus = localStorage.setItem('userStatus', askLater)
+        var userStatus = localStorage.setItem('userStatus', 'askLater')
     })
 }
 
