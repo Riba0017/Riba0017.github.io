@@ -32,17 +32,25 @@ function pushNotificationShower() {
         // проверка: это первый визит пользователя или он уже нажимал кнопку "потом"
         if(localStorage.getItem('userStatus')) {
             //здесь должно быть обращение к таймеру
-            var storedValue = localStorage.getItem('time');
-            var lastVisitDate = new Date(localStorage.getItem('time'));
-            console.log(storedValue);
-            console.log(lastVisitDate);
-            return console.log('remind me later');
+            var lastVisitDate = localStorage.getItem('time');
+            var remaneTime = lastVisitDate - new Date()/1000;
+            var delayTime = 120000; //время отсрочки для повторного показа попапа (2 мин)
+            if(remaneTime >= delayTime) {
+                // показываем первый попап с уведомлением
+                // здесь должен быть вызов функции создания и показа попапа
+                $overlay.delay(2000).fadeIn();
+                $popup.delay(2000).fadeIn();
+                pushNotificationsReminder();
+            } else {
+                return;
+            }
+        } else {
+            // показываем первый попап с уведомлением
+            // здесь должен быть вызов функции создания и показа попапа
+            $overlay.delay(2000).fadeIn();
+            $popup.delay(2000).fadeIn();
+            pushNotificationsReminder();
         }
-        // показываем первый попап с уведомлением
-        // здесь должен быть вызов функции создания и показа попапа
-        $overlay.delay(2000).fadeIn();
-        $popup.delay(2000).fadeIn();
-        pushNotificationsReminder();
     }
     // если запрос на подписку был отклонен ранее
     else {
