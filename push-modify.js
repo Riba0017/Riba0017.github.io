@@ -42,4 +42,7 @@ function notifyMe() {
     // want to be respectful there is no need to bother them any more.
 }
 
-initPushNotificationsPopupAsker();
+$(document).ready(function() {
+    initPushNotificationsPopupAsker();
+})
+
