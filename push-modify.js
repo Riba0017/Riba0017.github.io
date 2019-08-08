@@ -20,26 +20,24 @@ function initPushNotificationsPopupAsker() {
 function notifyMe() {
     var $popup = $('.js-popup');
     var $overlay = $('#overlay');
-
-    // Let's check whether notification permissions have already been granted
-    if (Notification.permission === "granted") {
-        console.log('User is already subscribed');
-    }
-    // Otherwise, we need to ask the user for permission
-    else if (Notification.permission !== 'denied' || Notification.permission === "default") {
-        $overlay.delay(2000).fadeIn();
-        $popup.delay(2000).fadeIn();
-//         Notification.requestPermission(function (permission) {
-//             // If the user accepts, let's create a notification
-//             if (permission === "granted") {
-//                 var notification = new Notification("Hi there!");
-//             }
-//         });
-    }
     console.log(Notification.permission);
 
-    // At last, if the user has denied notifications, and you
-    // want to be respectful there is no need to bother them any more.
+    // проверка: есть ли уже активная подписка на уведомления
+    if (Notification.permission === "granted") {
+        console.log('User is already subscribed');
+        return;
+    }
+    // проверка: запрос отклонен в прошлом или нет
+    else if (Notification.permission !== 'denied' || Notification.permission === "default") {
+        //показываем первый попап с уведомлением
+        //здесь должен быть вызов функции создания и показа попапа
+        $overlay.delay(2000).fadeIn();
+        $popup.delay(2000).fadeIn();
+    } 
+    // если запрос на подписку был отклонен ранее
+    else {
+        return;
+    }
 }
 
 $(document).ready(function() {
