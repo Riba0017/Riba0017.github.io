@@ -33,7 +33,7 @@ function pushNotificationShower() {
         if(localStorage.getItem('userStatus')) {
             //здесь должно быть обращение к таймеру
             var lastVisitDate = localStorage.getItem('time');
-            var remaneTime = lastVisitDate - new Date()/1000;
+            var remaneTime = parseInt(lastVisitDate) - new Date()/1000;
             var delayTime = 120000; //время отсрочки для повторного показа попапа (2 мин)
             if(remaneTime >= delayTime) {
                 // показываем первый попап с уведомлением
