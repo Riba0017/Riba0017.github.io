@@ -29,12 +29,12 @@ function notifyMe() {
     else if (Notification.permission !== 'denied' || Notification.permission === "default") {
         $overlay.delay(2000).fadeIn();
         $popup.delay(2000).fadeIn();
-        Notification.requestPermission(function (permission) {
-            // If the user accepts, let's create a notification
-            if (permission === "granted") {
-                var notification = new Notification("Hi there!");
-            }
-        });
+//         Notification.requestPermission(function (permission) {
+//             // If the user accepts, let's create a notification
+//             if (permission === "granted") {
+//                 var notification = new Notification("Hi there!");
+//             }
+//         });
     }
     console.log(Notification.permission);
 
