@@ -18,12 +18,13 @@ function initPushNotificationsPopupAsker() {
 }
  
 function pushNotificationShower() {
-    var $popup = $('.js-popup');
-    var $overlay = $('#overlay');
+
     console.log(Notification.permission);
 
     // проверка: есть ли уже активная подписка на уведомления
     if (Notification.permission === "granted") {
+        if(localStorage.getItem('time')) { localStorage.removeItem('time') }
+        if(localStorage.getItem('userStatus')) { localStorage.removeItem('userStatus') }
         console.log('User is already subscribed');
         return;
     }
@@ -34,12 +35,11 @@ function pushNotificationShower() {
             //здесь должно быть обращение к таймеру
             var lastVisitDate = localStorage.getItem('time');
             var remaneTime = + new Date() - parseInt(lastVisitDate);
-            var delayTime = 60000; //время отсрочки для повторного показа попапа (0,5 мин)
+            var delayTime = 60000; //время отсрочки для повторного показа попапа (1 мин)
             if(remaneTime >= delayTime) {
                 // показываем первый попап с уведомлением
                 // здесь должен быть вызов функции создания и показа попапа
-                $overlay.delay(2000).fadeIn();
-                $popup.delay(2000).fadeIn();
+                showPopap();
                 pushNotificationsReminder();
             } else {
                 return;
@@ -47,13 +47,14 @@ function pushNotificationShower() {
         } else {
             // показываем первый попап с уведомлением
             // здесь должен быть вызов функции создания и показа попапа
-            $overlay.delay(2000).fadeIn();
-            $popup.delay(2000).fadeIn();
+            showPopap();
             pushNotificationsReminder();
         }
     }
     // если запрос на подписку был отклонен ранее
     else {
+        if(localStorage.getItem('time')) { localStorage.removeItem('time') }
+        if(localStorage.getItem('userStatus')) { localStorage.removeItem('userStatus') }
         return;
     }
 }
