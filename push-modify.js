@@ -33,7 +33,7 @@ function pushNotificationShower() {
         if(localStorage.getItem('userStatus')) {
             //здесь должно быть обращение к таймеру
             var lastVisitDate = localStorage.getItem('time');
-            var remaneTime = new Date()/1000 - parseInt(lastVisitDate);
+            var remaneTime = + new Date() - parseInt(lastVisitDate);
             var delayTime = 60000; //время отсрочки для повторного показа попапа (0,5 мин)
             if(remaneTime >= delayTime) {
                 // показываем первый попап с уведомлением
@@ -69,7 +69,7 @@ function pushNotificationsReminder() {
     $remindBtn.on('click', function() {
         //добавление статуса клиента и текущей даты
         var userStatus = localStorage.setItem('userStatus', 'askLater');
-        var date = new Date()/1000;
+        var date = + new Date();
         var lastVisit = localStorage.setItem('time', date);
     })
 }
