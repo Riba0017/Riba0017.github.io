@@ -33,6 +33,7 @@ function pushNotificationShower() {
         if(localStorage.getItem('userStatus')) {
             //здесь должно быть обращение к таймеру
             var lastVisitDate = new Date(parseInt(localStorage.getItem('time')));
+           
             console.log(lastVisitDate);
             return console.log('remind me later');
         }
@@ -59,7 +60,8 @@ function pushNotificationsReminder() {
     $remindBtn.on('click', function() {
         //добавление статуса клиента и текущей даты
         var userStatus = localStorage.setItem('userStatus', 'askLater');
-        var lastVisit = localStorage.setItem('time', +new Date);
+        var date = new Date();
+        var lastVisit = localStorage.setItem('time', date);
     })
 }
 
