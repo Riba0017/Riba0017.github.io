@@ -16,7 +16,7 @@ function initPushNotificationsPopupAsker() {
         console.log("This browser does not support desktop notification");
     }
 }
-
+ 
 function pushNotificationShower() {
     var $popup = $('.js-popup');
     var $overlay = $('#overlay');
