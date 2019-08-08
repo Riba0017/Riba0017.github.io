@@ -31,6 +31,9 @@ function pushNotificationShower() {
     else if (Notification.permission !== 'denied' || Notification.permission === "default") {
         // проверка: это первый визит пользователя или он уже нажимал кнопку "потом"
         if(localStorage.getItem('userStatus')) {
+            //здесь должно быть обращение к таймеру
+            var lastVisitDate = new Date(parseInt(localStorage.getItem('time')));
+            console.log(lastVisitDate);
             return console.log('remind me later');
         }
         // показываем первый попап с уведомлением
@@ -49,14 +52,17 @@ function pushNotificationsReminder() {
     // var $agreeBtn = $('.js-agree-button');
     var $remindBtn = $('.js-ask-later-button');
 
-    // по клику на agreeBtn происходит вызов браузерного окна подписки
-    // (повешен сервисный класс)
+    // действия при нажатии кнопки "ОК"
+    // вызов браузерного окна подписки по классу стороннего сервиса
 
-    // создание таймера отсрочки на Х секунд
+    // действия при нажатии кнопки "Потом"
     $remindBtn.on('click', function() {
-        var userStatus = localStorage.setItem('userStatus', 'askLater')
+        //добавление статуса клиента и текущей даты
+        var userStatus = localStorage.setItem('userStatus', 'askLater');
+        var lastVisit = localStorage.setItem('time', +new Date);
     })
 }
+
 
 $(document).ready(function() {
     initPushNotificationsPopupAsker();
