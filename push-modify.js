@@ -32,8 +32,9 @@ function pushNotificationShower() {
         // проверка: это первый визит пользователя или он уже нажимал кнопку "потом"
         if(localStorage.getItem('userStatus')) {
             //здесь должно быть обращение к таймеру
-            var lastVisitDate = new Date(parseInt(localStorage.getItem('time')));
-           
+            var storedValue = localStorage.getItem('time');
+            var lastVisitDate = new Date(localStorage.getItem('time'));
+            console.log(storedValue);
             console.log(lastVisitDate);
             return console.log('remind me later');
         }
@@ -60,11 +61,10 @@ function pushNotificationsReminder() {
     $remindBtn.on('click', function() {
         //добавление статуса клиента и текущей даты
         var userStatus = localStorage.setItem('userStatus', 'askLater');
-        var date = new Date();
+        var date = new Date()/1000;
         var lastVisit = localStorage.setItem('time', date);
     })
 }
-
 
 $(document).ready(function() {
     initPushNotificationsPopupAsker();
