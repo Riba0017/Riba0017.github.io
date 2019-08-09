@@ -61,6 +61,7 @@
 }
 
 .popup-push-body .ask-later-button {
+    margin-right: 10px;
     background-color: #F1F1F1;
     color: #9B9B9B;
 }
