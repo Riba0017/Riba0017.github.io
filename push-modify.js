@@ -9,27 +9,23 @@ function initPushNotificationsPopupAsker() {
 }
 
 function showPopap() {
-    // создание попапа
-    $(document).append(' <div id="overlay" class="overlay">\n' +
-        '        <div class="popup-push-container js-popup">\n' +
-        '            <div class="popup-push-head">\n' +
-        '                <img src="/style/images/Img-Block.png" alt="Подписка на блог">\n' +
-        '            </div>\n' +
-        '            <div class="popup-push-body">\n' +
-        '                <h3 class="popup-push-title">Хотите получать уведомления о новых статьях в блоге?</h3>\n' +
-        '                <p class="popup-push-text">Разрешите присылать вам Push&#8209;уведомления</p>\n' +
-        '                <button type="button" class="ask-later-button js-button">Потом</button>\n' +
-        '                <button type="button" class="sp_notify_prompt agree-button js-button">ОК</button>\n' +
-        '            </div>\n' +
-        '        </div>\n' +
-        '    </div>');
+    $(document).ready(function() {
+        // создание попапа
+        var $startPoint = $('footer');
+        var $overlay = $('<div></div>').insertBefore($startPoint).attr('id', 'pushOverlay').addClass('push-overlay');
+        var $container = $('<div></div>').appendTo($overlay).addClass('popup-push-container js-popup');
+        var $popupHead = $('<div></div>').appendTo($container).addClass('popup-push-head');
+        var $popupBody = $('<div></div>').appendTo($container).addClass('popup-push-body');
+        $('<h3>Хотите получать уведомления о новых статьях в блоге?</h3>').appendTo($popupBody).addClass('popup-push-title');
+        $('<p>Разрешите присылать вам Push&#8209;уведомления</p>').appendTo($popupBody).addClass('popup-push-text');
+        $('<button>Потом</button>').appendTo($popupBody).attr('type', 'button').addClass('ask-later-button js-button');
+        $('<button>ОК</button>').appendTo($popupBody).attr('type', 'button').addClass('sp_notify_prompt agree-button js-button');
 
-
-    var $popup = $('.js-popup');
-    var $overlay = $('#overlay');
-
-    $overlay.delay(2000).fadeIn();
-    $popup.delay(2000).fadeIn();
+        // активация попапа
+        $('#pushOverlay').delay(2000).fadeIn();
+        $('.js-popup').delay(2000).fadeIn();
+        pushNotificationsReminder()
+    })
 }
 
 function pushNotificationShower() {
@@ -52,14 +48,12 @@ function pushNotificationShower() {
             if(remaneTime >= delayTime) {
                 // создаем и показываем первый попап с уведомлением, устанавливаем обработчики событий
                 showPopap();
-                pushNotificationsReminder();
             } else {
                 return;
             }
         } else {
             // создаем и показываем первый попап с уведомлением, устанавливаем обработчики событий
             showPopap();
-            pushNotificationsReminder();
         }
     }
 }
@@ -73,6 +67,9 @@ function pushNotificationsReminder() {
         localStorage.setItem('userStatus', 'askLater');
         var date = + new Date();
         localStorage.setItem('time', date);
+        // закрываем попап
+        $('#pushOverlay').fadeOut();
+        $('.js-popup').fadeOut();
     });
 }
 
