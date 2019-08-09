@@ -11,8 +11,8 @@ function initPushNotificationsPopupAsker() {
 function showPopap() {
     $(document).ready(function() {
         // создание попапа
-        var $startPoint = $('footer');
-        var $overlay = $('<div></div>').insertBefore($startPoint).attr('id', 'pushOverlay').addClass('push-overlay');
+       
+        var $overlay = $('<div></div>').appendTo('body').attr('id', 'pushOverlay').addClass('push-overlay');
         var $container = $('<div></div>').appendTo($overlay).addClass('popup-push-container js-popup');
         var $popupHead = $('<div></div>').appendTo($container).addClass('popup-push-head');
         var $popupBody = $('<div></div>').appendTo($container).addClass('popup-push-body');
