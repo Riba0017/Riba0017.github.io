@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 
-.overlay {
+.push-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -32,6 +32,9 @@
     left: 38px;
     top: -125px;
     z-index: -1;
+    background: url(/img/Img-Block.png) no-repeat;
+    width: 100%;
+    height: 200px;
 }
 
 .popup-push-body {
