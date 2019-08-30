@@ -89,7 +89,7 @@ function addEventToGTA() {
 //     });
     demoButton.bind('click', function() {
         $.ajax({
-            url: 'http://192.168.88.124/support/wp-admin/admin-ajax.php',
+            url: 'https://neaktor.com/support/wp-admin/admin-ajax.php',
             type: 'GET',
             data: ({ request: 'demo' }),
             dataType: 'html',
