@@ -104,7 +104,17 @@ $(document).ready(function() {
 
 $(document).ready(function() {
         var demoButton = $('.js-demo-btn');
+//     var data = { request: 'demo' };
     demoButton.on('click', function() {
+        fetch('https://neaktor.com/support/contact_us/index.php', {
+  method: 'post',
+  headers: {
+    'Accept': 'application/json, text/plain, */*',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({demo: "demo"})}).then(res=>res.json())
+  .then(res => console.log(res));
+        
 //          fetch("https://neaktor.com/support/contact_us/index.php", {
 //             method: 'POST',
 //             body: JSON.stringify(data),
@@ -119,16 +129,16 @@ $(document).ready(function() {
 //     .catch((err) => console.log(err))
         
         
-        $.ajax({
-            type: "POST",
-            url:  "https://neaktor.com/support/contact_us/index.php",
-            cache: false,
-            dataType    : 'jsonp',
-            jsonp       : 'c',
-            success: function(html) {
-                console.log(html);
-            }
-        });
+//         $.ajax({
+//             type: "POST",
+//             url:  "https://neaktor.com/support/contact_us/index.php",
+//             cache: false,
+//             dataType    : 'jsonp',
+//             jsonp       : 'c',
+//             success: function(html) {
+//                 console.log(html);
+//             }
+//         });
      })
  });
 
