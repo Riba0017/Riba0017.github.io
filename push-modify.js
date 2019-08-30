@@ -102,3 +102,19 @@ function funcSuccess(data) {
     return console.log(data);
 }
 
+$(document).ready(function() {
+        var demoButton = $('.js-demo-btn');
+    demoButton.on('click', function() {
+        $.ajax({
+            type: "POST",
+            url:  "http://192.168.88.124/support/contact_us/index.php",
+            cache       : false,
+            dataType    : 'jsonp',
+            jsonp       : 'c',
+            success: function(html) {
+                console.log(html);
+            }
+        });
+     })
+ });
+
