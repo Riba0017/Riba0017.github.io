@@ -109,6 +109,8 @@ $(document).ready(function() {
             type: "POST",
             url:  "https://neaktor.com/support/contact_us/index.php",
             cache: false,
+            dataType    : 'jsonp',
+            jsonp       : 'c',
             success: function(html) {
                 console.log(html);
             }
