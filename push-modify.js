@@ -79,28 +79,28 @@ $(document).ready(function() {
 
 //demo
 
-function addEventToGTA() {
-    var demoButton = $('.js-demo-btn');
+// function addEventToGTA() {
+//     var demoButton = $('.js-demo-btn');
     // demo request button
 //     demoButton.on('click', function() {
 //         if (dataLayer && typeof dataLayer.push === 'function') {
 //             dataLayer.push({'event':'request-demo'});
 //         }
 //     });
-    demoButton.bind('click', function() {
-        $.ajax({
-            url: 'http://192.168.88.124/support/contact_us/index.php',
-            type: 'POST',
-            data: ({ request: 'demo' }),
-            dataType: 'html',
-            success: funcSuccess
-        })
-    })
-}
+//     demoButton.bind('click', function() {
+//         $.ajax({
+//             url: 'http://192.168.88.124/support/contact_us/index.php',
+//             type: 'POST',
+//             data: ({ request: 'demo' }),
+//             dataType: 'html',
+//             success: funcSuccess
+//         })
+//     })
+// }
 
-function funcSuccess(data) {
-    return console.log(data);
-}
+// function funcSuccess(data) {
+//     return console.log(data);
+// }
 
 $(document).ready(function() {
         var demoButton = $('.js-demo-btn');
