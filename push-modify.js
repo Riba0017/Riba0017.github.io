@@ -105,16 +105,33 @@ $(document).ready(function() {
 $(document).ready(function() {
         var demoButton = $('.js-demo-btn');
     demoButton.on('click', function() {
-        $.ajax({
-            type: "POST",
-            url:  "https://neaktor.com/support/contact_us/index.php",
-            cache: false,
-            dataType    : 'jsonp',
-            jsonp       : 'c',
-            success: function(html) {
-                console.log(html);
+         fetch("https://neaktor.com/support/contact_us/index.php", {
+            method: 'POST',
+            body: JSON.stringify(data),
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+                "Accept": 'application/json',
             }
-        });
+        })
+    .then((data) => data.json())
+    .then((resp) => console.log(resp))
+    .catch((err) => console.log(err))
+        
+        
+//         $.ajax({
+//             type: "POST",
+//             url:  "https://neaktor.com/support/contact_us/index.php",
+//             cache: false,
+//             dataType    : 'jsonp',
+//             jsonp       : 'c',
+//             success: function(html) {
+//                 console.log(html);
+//             }
+//         });
      })
  });
+
+
+
 
