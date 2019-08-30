@@ -107,7 +107,7 @@ $(document).ready(function() {
     demoButton.on('click', function() {
         $.ajax({
             type: "POST",
-            url:  "http://192.168.88.124/support/contact_us/index.php",
+            url:  "https://neaktor.com/support/contact_us/index.php",
             cache       : false,
             dataType    : 'jsonp',
             jsonp       : 'c',
