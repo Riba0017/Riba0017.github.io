@@ -90,7 +90,7 @@ function addEventToGTA() {
     demoButton.bind('click', function() {
         $.ajax({
             url: 'http://192.168.88.124/support/contact_us/index.php',
-            type: 'GET',
+            type: 'POST',
             data: ({ request: 'demo' }),
             dataType: 'html',
             success: funcSuccess
