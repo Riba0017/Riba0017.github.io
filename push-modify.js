@@ -89,7 +89,7 @@ function addEventToGTA() {
 //     });
     demoButton.bind('click', function() {
         $.ajax({
-            url: 'http://192.168.88.124/support/wp-admin/admin-ajax.php',
+            url: 'http://192.168.88.124/support/contact_us/index.php',
             type: 'GET',
             data: ({ request: 'demo' }),
             dataType: 'html',
