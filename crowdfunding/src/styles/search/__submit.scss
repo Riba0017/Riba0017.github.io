@@ -1,0 +1,17 @@
+
+.search__submit {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  outline: none;
+  background: none;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url("./images/icons/loope.svg") center no-repeat;
+  }
+}

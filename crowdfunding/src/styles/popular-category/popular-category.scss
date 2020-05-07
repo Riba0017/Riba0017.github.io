@@ -1,0 +1,11 @@
+
+@import "_link";
+
+.popular-category {
+  padding-right: 27px;
+  @media all and (min-width: 1023px) {
+    &:nth-last-of-type(1) {
+      padding-right: 0;
+    }
+  }
+}

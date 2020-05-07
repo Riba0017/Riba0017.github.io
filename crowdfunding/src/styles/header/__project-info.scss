@@ -1,0 +1,16 @@
+@import "../variables";
+
+.header__project-info {
+  display: inline-block;
+  width: 100%;
+  padding-top: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #081531;
+  transition: all ease .5s 0s;
+
+  &:hover {
+    color: $basic-blue;
+  }
+}

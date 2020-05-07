@@ -1,0 +1,14 @@
+
+@import "../variables";
+
+.header__personal-info {
+  display: inline-block;
+  padding-bottom: 6px;
+  font-size: 18px;
+  line-height: 21px;
+  color: $basic-black;
+
+  @media all and (min-width: 1023px) {
+    padding-left: 25px;
+  }
+}

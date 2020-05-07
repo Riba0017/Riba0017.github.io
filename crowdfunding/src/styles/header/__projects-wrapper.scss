@@ -1,0 +1,13 @@
+
+.header__projects-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media all and (min-width: 1023px) {
+    padding: 0 25px;
+    border-top: 1px solid #e5e5e5;
+  }
+}
+

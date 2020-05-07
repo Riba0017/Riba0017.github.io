@@ -1,0 +1,12 @@
+@import "../variables";
+
+.category__input {
+  display: none;
+
+  @media all and (min-width: 1023px) {
+    &:checked + .category__item {
+      border-color: $basic-blue;
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.16);
+    }
+  }
+}

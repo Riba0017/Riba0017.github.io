@@ -1,0 +1,13 @@
+@import "../variables";
+
+.category__title {
+  display: none;
+  @media all and (min-width: 1023px) {
+    display: block;
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: $basic-black;
+  }
+}

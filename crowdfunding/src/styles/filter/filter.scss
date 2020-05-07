@@ -1,0 +1,13 @@
+@import "_wrapper";
+@import "_button";
+@import "_popular";
+@import "_categories";
+@import "_extra-categories";
+
+.filter {
+  width: 100%;
+
+  @media all and (min-width: 1023px) {
+    padding-top: 18px;
+  }
+}

@@ -1,0 +1,11 @@
+
+.filter__popular {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media all and (min-width: 883px) {
+    margin-left: auto;
+  }
+}

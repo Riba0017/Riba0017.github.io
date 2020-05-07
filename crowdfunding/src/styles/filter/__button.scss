@@ -1,0 +1,23 @@
+@import "../variables";
+
+.filter__button {
+  margin: 0 8px 15px 0;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    padding-left: 10px;
+    vertical-align: middle;
+    width: 15px;
+    height: 13px;
+    background: url("./images/icons/filter.svg") center no-repeat;
+  }
+
+  @media all and (min-width: 429px) {
+    margin: 0 8px 0 0;
+  }
+  @media all and (min-width: 608px) {
+    margin: 0 0 0 8px;
+  }
+}
+

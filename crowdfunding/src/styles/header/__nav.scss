@@ -1,0 +1,14 @@
+
+.header__nav {
+
+}
+
+.header__nav--order {
+  order: 1;
+}
+
+@media all and (min-width: 1023px) {
+  .header__nav--order {
+    order: 0;
+  }
+}

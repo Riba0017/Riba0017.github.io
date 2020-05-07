@@ -1,0 +1,22 @@
+
+.header__icon {
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 44px;
+    height: 3px;
+    background-color: #969696;
+    border-radius: 2px;
+    transition: .4s;
+  }
+  &::after {
+    top: 3px;
+  }
+  &::before {
+    top: -6px;
+  }
+}

@@ -1,0 +1,35 @@
+
+.header__checkbox {
+  display: none;
+
+  &:checked ~ {
+    .header {
+      &__container {
+        height: auto;
+        transition-delay: 0s;
+      }
+
+      &__btn {
+        .header__icon {
+          background: transparent;
+
+          &::before,
+          &::after {
+            top: 0;
+            width: 30px;
+          }
+
+          &::after {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+          }
+
+          &::before {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}

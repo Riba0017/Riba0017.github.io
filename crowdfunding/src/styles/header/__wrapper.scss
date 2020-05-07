@@ -1,0 +1,19 @@
+
+
+.header__wrapper {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 18px;
+  transition: all ease .5s 0s;
+
+  @media all and (min-width: 1023px) {
+    flex-flow: row nowrap;
+    height: 78px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 55px;
+  }
+}

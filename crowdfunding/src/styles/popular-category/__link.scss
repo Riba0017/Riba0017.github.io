@@ -1,0 +1,19 @@
+@import "../variables.scss";
+.popular-category__link {
+  display: inline-block;
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #646464;
+
+  @media all and (min-width: 1023px) {
+    &:hover {
+      color: $basic-blue;
+    }
+  }
+}
+
+.popular-category__link--selected {
+  color: $basic-blue;
+}

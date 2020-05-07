@@ -1,0 +1,12 @@
+@import "_item";
+@import "_link";
+
+.nav {
+  text-align: left;
+
+  @media all and (min-width: 1023px) {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 0;
+  }
+}

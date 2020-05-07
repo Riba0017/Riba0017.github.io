@@ -1,0 +1,19 @@
+
+.main__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1440px;
+  padding: 15px 18px;
+  transition: all ease .5s 0s;
+
+  @media all and (min-width: 1023px) {
+    margin: 0 auto;
+    padding: 20px 55px 25px;
+  }
+
+  @media all and (min-width: 1440px) {
+    justify-content: flex-start;
+  }
+}

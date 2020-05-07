@@ -1,0 +1,14 @@
+
+.header__user-settings {
+  @media all and (min-width: 1023px) {
+    padding-left: 25px;
+  }
+}
+
+.header__user-settings--last {
+  padding-bottom: 20px;
+
+  @media all and (min-width: 1023px) {
+    padding-bottom: 40px;
+  }
+}

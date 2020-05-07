@@ -1,0 +1,16 @@
+.nav__item {
+  padding-top: 30px;
+
+  @media all and (min-width: 1023px) {
+    padding-top: 0;
+    padding-right: 40px;
+  }
+}
+
+.nav__item--desktop {
+  display: none;
+
+  @media all and (min-width: 1023px) {
+    display: inline-block;
+  }
+}

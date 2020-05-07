@@ -1,0 +1,14 @@
+
+.header__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 44px;
+  height: 30px;
+  cursor: pointer;
+  transition: .4s;
+
+  @media all and (min-width: 1023px) {
+    display: none;
+  }
+}

@@ -1,0 +1,115 @@
+@import "../variables";
+
+.category__item {
+  width: 100%;
+  max-width: 167px;
+  margin: 0 5px 10px 0;
+  padding: 15px 18px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: $basic-black;
+  border: 1px solid #E5E5E5;
+  background: #FFFFFF;
+  transition: all ease .5s 0s;
+
+  @media all and (max-width: 380px) {
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+  }
+
+  @media all and (min-width: 1023px) {
+    width: auto;
+    margin: 0 10px 12px 0;
+    border-radius: 4px;
+
+    &:hover {
+      border-color: #B9B9B9;
+    }
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .category__item--mobile {
+    max-width: 100%;
+    padding: 7px 12px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: #171F2E;
+    border: none;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+
+.category__item--book::before {
+    background: url("./images/icons/book.svg") center no-repeat;
+}
+.category__item--camera::before {
+  background: url("./images/icons/camera.svg") center no-repeat;
+}
+.category__item--animals::before {
+  background: url("./images/icons/animals.svg") center no-repeat;
+}
+.category__item--community::before {
+  background: url("./images/icons/community.svg") center no-repeat;
+}
+.category__item--competition::before {
+  background: url("./images/icons/competition.svg") center no-repeat;
+}
+.category__item--education::before {
+  background: url("./images/icons/education.svg") center no-repeat;
+}
+.category__item--emergency::before {
+  background: url("./images/icons/emergency.svg") center no-repeat;
+}
+.category__item--event::before {
+  background: url("./images/icons/event.svg") center no-repeat;
+}
+.category__item--faith::before {
+  background: url("./images/icons/faith.svg") center no-repeat;
+}
+.category__item--family::before {
+  background: url("./images/icons/family.svg") center no-repeat;
+}
+.category__item--medical::before {
+  background: url("./images/icons/medical.svg") center no-repeat;
+}
+.category__item--memorial::before {
+  background: url("./images/icons/memorial.svg") center no-repeat;
+}
+.category__item--newlywed::before {
+  background: url("./images/icons/newlywed.svg") center no-repeat;
+}
+.category__item--sports::before {
+  background: url("./images/icons/sports.svg") center no-repeat;
+}
+.category__item--travel::before {
+  background: url("./images/icons/travel.svg") center no-repeat;
+}
+.category__item--volunteer::before {
+  background: url("./images/icons/volunteer.svg") center no-repeat;
+}
+.category__item--wishes::before {
+  background: url("./images/icons/wishes.svg") center no-repeat;
+}
+.category__item--nonprofit::before {
+  background: url("./images/icons/nonprofit.svg") center no-repeat;
+}
+

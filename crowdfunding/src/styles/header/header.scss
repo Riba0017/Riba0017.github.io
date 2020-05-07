@@ -1,0 +1,28 @@
+
+@import "_wrapper";
+@import "_checkbox";
+@import "_btn";
+@import "_icon";
+@import "_container";
+@import "_nav";
+@import "_user-block";
+@import "_personal-info";
+@import "_project-info";
+@import "_projects-wrapper";
+@import "_project-counter";
+@import "_user-settings";
+@import "_user-logout";
+@import "_user-info";
+@import "_username";
+@import "_user-mail";
+@import "_user-icon";
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.08);
+  z-index: 999;
+}
+
+
