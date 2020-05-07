@@ -62,7 +62,7 @@ input:focus {
   position: relative;
   display: flex;
   flex-flow: row wrap;
-  max-width: 1440px;
+  max-width: 1332px;
   padding: 15px 18px 0;
   transition: all ease .5s 0s;
 
@@ -71,6 +71,7 @@ input:focus {
     left: 0;
     right: 0;
     margin: 0 auto;
+    padding: 0;
     background-color: #FFFFFF;
   }
 }

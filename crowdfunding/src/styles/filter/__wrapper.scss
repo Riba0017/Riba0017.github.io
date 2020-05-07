@@ -2,14 +2,19 @@
 .filter__wrapper {
   display: flex;
   flex-flow: row wrap;
-  max-width: 1440px;
+  max-width: 1332px;
   padding: 15px 18px 0;
   transition: all ease .5s 0s;
 
   @media all and (min-width: 1023px) {
+    width: calc(100% - 110px);
     margin: 0 55px;
     padding: 10px 0;
     border-bottom: 1px solid #EAEAEA;
     border-top: 1px solid #EAEAEA;
+  }
+
+  @media all and (min-width: 1200px) {
+    margin: 0 auto;
   }
 }
