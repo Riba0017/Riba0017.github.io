@@ -1,0 +1,14 @@
+
+.slider__item {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 33.333%;
+  height: 100%;
+  float: left;
+  padding: 40px 0 35px 25px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+}

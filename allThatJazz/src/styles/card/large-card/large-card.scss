@@ -1,0 +1,14 @@
+@import '_author';
+@import '_link';
+@import '_heading';
+@import '_title';
+@import '_image';
+
+
+.large-card {
+  min-height: 216px;
+}
+
+.large-card--recommended {
+  min-height: 256px;
+}

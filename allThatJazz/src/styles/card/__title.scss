@@ -1,0 +1,13 @@
+@import "../variables";
+
+.card__title {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  color: $bg-white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}

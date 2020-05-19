@@ -1,0 +1,24 @@
+@import '_inner';
+@import '_container';
+@import '_item';
+@import '_label';
+@import '_title';
+@import '_number';
+@import '_link';
+@import '_back-side';
+@import '_navigation';
+@import '_image';
+@import '_dot';
+
+.animate {
+  transition: transform 0.3s ease-out;
+}
+
+.slider {
+  width: 100vw;
+  height: 420px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50%;
+  top: 0;
+}

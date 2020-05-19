@@ -1,0 +1,14 @@
+@import '_title';
+@import '_text';
+@import '_items';
+
+.events {
+  position: absolute;
+  top: 100%;
+  background-color: transparent;
+  transition: all ease 0.5s 0s;
+
+  &--visible {
+    top: 0;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../variables';
+
+.slider__dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  background-color: #333333;
+
+  &:not(:last-of-type) {
+    margin-right: 6px;
+  }
+
+  &--active {
+    background-color: $orange;
+  }
+}

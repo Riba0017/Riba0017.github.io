@@ -1,0 +1,13 @@
+@import '../variables';
+
+.slider__back-side {
+  position: absolute;
+  top: 25px;
+  right: 5%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  width: 70%;
+  height: 90%;
+  z-index: -1;
+}

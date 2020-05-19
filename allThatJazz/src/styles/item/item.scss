@@ -1,0 +1,11 @@
+@import '../variables';
+@import '_label';
+
+.item {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 140%;
+  margin-left: -128px;
+  background-color: $bg-dark;
+  transition: all ease 0.4s 0s;
+}

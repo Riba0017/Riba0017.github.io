@@ -1,0 +1,19 @@
+@import '../variables';
+
+.item__label {
+  position: relative;
+  width: 100%;
+  max-width: 128px;
+  height: auto;
+  background: $gradient-orange-diag;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 8px);
+    height: 17px;
+    width: 15px;
+    background: url("./images/icons/saved_icon.svg");
+  }
+}

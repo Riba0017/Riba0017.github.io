@@ -1,0 +1,16 @@
+@import '../variables';
+@import '_image';
+@import '_heading';
+@import '_title';
+@import '_about';
+@import '_label';
+@import 'small-card/small-card';
+@import 'medium-card/medium-card';
+@import 'large-card/large-card';
+
+.card {
+  position: relative;
+  padding-right: 15px;
+  width: 100%;
+  border-top: 1px solid $line;
+}

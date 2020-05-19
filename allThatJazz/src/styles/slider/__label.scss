@@ -1,0 +1,23 @@
+@import '../variables';
+
+.slider__label {
+  font-size: 16px;
+  line-height: 19px;
+  color: $bg-white;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;
+    vertical-align: top;
+  }
+
+  &--hottest::before {
+    background: transparent url("./images/icons/hottest_icon.svg") center no-repeat;
+  }
+  &--nearest::before {
+    background: transparent url("./images/icons/nearest_icon.svg") center no-repeat;
+  }
+}

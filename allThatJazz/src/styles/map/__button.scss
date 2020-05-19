@@ -1,0 +1,13 @@
+@import '../variables';
+
+.map__button {
+  position: absolute;
+  bottom: 75px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: $bg-black;
+}

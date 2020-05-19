@@ -1,0 +1,45 @@
+@import 'styles/fonts';
+@import '~normalize.css';
+@import 'styles/variables';
+@import 'styles/header/header';
+@import 'styles/slider/slider';
+@import 'styles/content/content';
+@import 'styles/item/item';
+@import 'styles/card/card';
+@import 'styles/footer/footer';
+@import 'styles/navigation/navigation';
+@import 'styles/map/map';
+@import 'styles/events/events';
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'SFDisplay', sans-serif ;
+  font-size: 14px;
+  background-color: $bg-black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
