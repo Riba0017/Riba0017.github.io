@@ -3,6 +3,7 @@
 @import "_events";
 
 .map {
+  position: fixed !important;
   height: 100vh;
   width: 100%;
 }

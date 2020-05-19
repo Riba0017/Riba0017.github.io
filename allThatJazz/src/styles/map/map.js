@@ -427,11 +427,9 @@ function eventsLoader() {
 
     eventBtn.addEventListener('touchstart', () => {
         eventContainer.classList.add('events--visible');
-        map.style.position = 'fixed';
 
         eventsHeader.addEventListener('touchstart', () => {
             eventContainer.classList.remove('events--visible');
-            map.style.position = 'static';
         })
     })
 

@@ -3,12 +3,13 @@
 @import '_items';
 
 .events {
-  position: absolute;
+  position: fixed;
   top: 100%;
   background-color: transparent;
   transition: all ease 0.5s 0s;
 
   &--visible {
+    position: absolute;
     top: 0;
   }
 }
