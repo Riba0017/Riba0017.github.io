@@ -86,7 +86,7 @@ module.exports = {
                 test: /\.(ttf|woff|woff2)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]'
+                    name: '[path][name].[ext]'
                 }
             },
             {
