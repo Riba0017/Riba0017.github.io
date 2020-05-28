@@ -1,0 +1,27 @@
+@import "../variables";
+
+.card__label {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: $extra-info;
+  background-color: #FFFFFF;
+  border: 1px solid #DADEE2;
+  border-radius: 50px;
+
+  &--important {
+    color:#FFFFFF;
+    background-color: #FF8066;
+  }
+
+  @media all and (min-width: 768px) {
+    margin-bottom: 0px;
+  }
+  @media all and (min-width: $tablet-width) {
+    padding: 5px 15px;
+  }
+}

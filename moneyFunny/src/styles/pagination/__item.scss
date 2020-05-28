@@ -1,0 +1,62 @@
+@import "../variables";
+
+.pagination__item {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 42px;
+  text-align: center;
+  color: $font-black;
+  background: #FFFFFF;
+  border: 1px solid #DADEE2;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #F6F9FC;
+  }
+
+  &:not(:last-of-type) {
+    border-right: none;
+  }
+
+  &--arrow::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 1px solid transparent;
+    transform: rotate(45deg);
+  }
+  &--active,
+  &--active:hover {
+    color: #FFFFFF;
+    background-color: #AEB4BF;
+  }
+  &--arrow-left {
+     border-radius: 3px 0 0 3px;
+  }
+  &--arrow-left::after {
+    border-left-color: $font-black;
+    border-bottom-color: $font-black;
+  }
+  &--arrow-left-disabled,
+  &--arrow-right-disabled {
+    background-color: #F7FAFC;
+  }
+  &--arrow-left-disabled::after {
+    border-left-color: #ADB4BF;
+    border-bottom-color: #ADB4BF;
+  }
+  &--arrow-right {
+    border-radius: 0 3px 3px 0;
+  }
+  &--arrow-right::after {
+    border-top-color: $font-black;
+    border-right-color: $font-black;
+  }
+}

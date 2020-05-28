@@ -1,0 +1,12 @@
+@import "../variables";
+
+.header__content {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0 15px;
+  transition: $transition;
+
+  @media all and (min-width: 1230px) {
+    padding: 0;
+  }
+}

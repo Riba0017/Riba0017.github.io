@@ -1,0 +1,54 @@
+@import "../variables";
+
+.tab-menu__tab {
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+  height: 60px;
+  background: #FFFFFF;
+  transition: $transition;
+
+  &:not(:last-of-type)::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: inline-block;
+    width: 1px;
+    height: 40px;
+    background-color: #F1F4F7;
+  }
+
+  &:nth-of-type(1) .tab-menu__link::before {
+     background: transparent url("./images/icons/best-cards.svg") center no-repeat;
+   }
+  &:nth-of-type(2) .tab-menu__link::before {
+    background: transparent url("./images/icons/cashback.svg") center no-repeat;
+  }
+  &:nth-of-type(3) .tab-menu__link::before {
+    background: transparent url("./images/icons/persent.svg") center no-repeat;
+  }
+  &:nth-of-type(4) .tab-menu__link::before {
+    background: transparent url("./images/icons/plane.svg") center no-repeat;
+  }
+  &:nth-of-type(5) .tab-menu__link::before {
+    background: transparent url("./images/icons/rassrochka.svg") center no-repeat;
+  }
+  &:nth-of-type(6) .tab-menu__link::before {
+    background: transparent url("./images/icons/student.svg") center no-repeat;
+  }
+
+  @media all and (min-width: 768px) {
+    height: 90px;
+
+    &:not(:last-of-type)::after {
+      height: 70px;
+    }
+  }
+  @media all and (min-width: 1200px) {
+    width: calc(100%/6);
+  }
+}
+
+
+

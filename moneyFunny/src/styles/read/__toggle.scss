@@ -1,0 +1,11 @@
+.read__toggle {
+  display: none;
+
+  &:checked ~ .read__text {
+    -webkit-line-clamp: 20;
+  }
+  &:checked + .read__button::after {
+    top: 7px;
+    transform: rotate(225deg);
+  }
+}

@@ -1,0 +1,29 @@
+@import "../variables";
+@import "_content";
+@import "_title";
+@import "_text";
+@import "_button";
+
+.banner {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  max-width: 1200px;
+  margin: 0 15px 60px;
+  padding: 25px 20px;
+  border-radius: 5px;
+  background: #FFFFFF url("./images/cards-mobile.png") right no-repeat;
+  box-shadow: 0px 4px 20px #EEF0F2;
+
+  @media all and (min-width: $tablet-width) {
+    background: #FFFFFF url("./images/cards.png") 95% no-repeat;
+    background-size: contain;
+  }
+
+  @media all and (min-width: 1230px) {
+    width: 100%;
+    margin: 0 auto 60px;
+  }
+}

@@ -1,0 +1,23 @@
+@import "../variables";
+
+.filter__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  min-height: 46px;
+  padding: 0 16px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  overflow: hidden;
+
+  & + .filter__input + & {
+    border-top: 1px solid #C7CCD160;
+  }
+
+  &:hover {
+    background-color: #F6F9FC;
+    color: $font-black;
+  }
+}

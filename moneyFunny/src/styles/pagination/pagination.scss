@@ -1,0 +1,20 @@
+@import "_item";
+@import "_block";
+
+.pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  max-width: 1200px;
+  margin: 0 15px 30px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 20px #EEF0F2;
+  border-radius: 5px;
+
+  @media all and (min-width: 1230px) {
+    width: 100%;
+    margin: 0 auto 30px;
+  }
+}

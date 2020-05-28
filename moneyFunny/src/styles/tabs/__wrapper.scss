@@ -1,0 +1,11 @@
+@import "../variables";
+
+.tabs__wrapper {
+  @media all and (min-width: $tablet-width) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 30px 0;
+  }
+}

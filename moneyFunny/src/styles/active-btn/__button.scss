@@ -1,0 +1,43 @@
+@import "../variables";
+
+.active-btn__button {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: $text-hover-green;
+  box-shadow: 0px 5px 10px rgba(149, 206, 90, 0.4);
+  transition: $transition;
+
+  &:hover {
+    background-color: #8CC459;
+    box-shadow: 0px 5px 10px rgba(149, 206, 90, 0.4);
+  }
+
+  &:focus {
+    border: 1px solid $font-black;
+    box-shadow: 0px 5px 10px rgba(149, 206, 90, 0.4);
+  }
+}
+
+.active-btn__button--default {
+  color: $font-black;
+  background-color: #FFFFFF;
+  border-color: #DADEE2;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    background-color: #FFFFFF;
+    border-color: #333E50;
+    box-shadow: none;
+  }
+}

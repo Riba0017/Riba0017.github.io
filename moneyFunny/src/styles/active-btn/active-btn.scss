@@ -1,0 +1,31 @@
+@import "../variables";
+@import "_button";
+@import "_requests";
+
+.active-btn {
+  display: block;
+  @media all and (max-width: $tablet-width - 1) {
+    display: none;
+  }
+  @media all and (min-width: $tablet-width) {
+    width: 210px;
+    margin-left: 65px;
+
+    &--banner {
+      width: auto;
+      margin: 0;
+    }
+  }
+
+  &--banner {
+    display: block;
+  }
+
+  &--mobile {
+    display: block;
+    @media all and (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+}

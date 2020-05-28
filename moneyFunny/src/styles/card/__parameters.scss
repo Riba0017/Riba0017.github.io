@@ -1,0 +1,14 @@
+@import "../variables";
+
+.card__parameters {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+
+  @media all and (min-width: $tablet-width) {
+    width: 100%;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,36 @@
+@import "../variables";
+
+
+.tabs__label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px 13px;
+  background: #FFFFFF;
+  border-top: 1px solid $border-gray;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  color: $font-black;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    border-bottom-color: #ADB4BF;
+    border-right-color: #ADB4BF;
+    transform: rotate(45deg);
+    transition: $transition;
+  }
+
+  @media all and (min-width: $tablet-width) {
+    display: none;
+  }
+}

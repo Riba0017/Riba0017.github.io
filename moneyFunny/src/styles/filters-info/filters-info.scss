@@ -1,0 +1,13 @@
+@import "../variables";
+@import "_general";
+@import "_text";
+
+.filters-info {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 20px auto;
+
+  @media all and (max-width: 1230px) {
+    margin: 20px 15px;
+  }
+}

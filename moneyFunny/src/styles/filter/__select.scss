@@ -1,0 +1,19 @@
+
+
+.filter__select {
+  position: relative;
+  width: 155px;
+  margin: 0 auto;
+
+  &[data-state="active"] {
+    .filter__title {
+      &::after {
+        top: 6px;
+        transform: rotate(225deg);
+      }
+    }
+    .filter__content {
+      opacity: 1;
+    }
+  }
+}

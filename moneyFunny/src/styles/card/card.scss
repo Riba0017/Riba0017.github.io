@@ -1,0 +1,38 @@
+@import "_header";
+@import "_extra-info";
+@import "_title";
+@import "_tiezers";
+@import "_bank";
+@import "_type";
+@import "_more";
+@import "_intro";
+@import "_top-block";
+@import "_parameters";
+@import "_labels";
+@import "_label";
+@import "_content";
+@import "_card";
+@import "_info";
+@import "_image";
+
+
+.card {
+  width: auto;
+  max-width: 1200px;
+  margin: 20px 15px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px #EEF0F2;
+  border-radius: 5px;
+
+  @media all and (min-width: 1230px) {
+    margin: 20px 0;
+  }
+
+  &--visible {
+    display: block;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

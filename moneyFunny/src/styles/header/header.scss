@@ -1,0 +1,10 @@
+@import "../variables";
+@import "_content";
+@import "_title";
+@import "_text";
+
+.header {
+  padding: 20px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid $border-gray;
+}

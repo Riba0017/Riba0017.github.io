@@ -1,0 +1,17 @@
+@import "../variables";
+
+.filters-info__general {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+
+  @media all and (max-width: 535px) {
+    justify-content: flex-start;
+  }
+
+  @media all and (max-width: 829px) {
+    margin-bottom: 10px;
+  }
+}

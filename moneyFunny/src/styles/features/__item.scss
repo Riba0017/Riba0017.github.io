@@ -1,0 +1,33 @@
+@import "../variables";
+
+.features__item {
+  padding-left: 25px;
+  position: relative;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 5px;
+    height: 10px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    border-bottom-color: $text-hover-green;
+    border-right-color: $text-hover-green;
+    transform: rotate(45deg);
+  }
+
+  @media all and (min-width: $tablet-width) {
+    padding-left: 30px;
+
+    &::before {
+      left: 5px;
+    }
+  }
+}

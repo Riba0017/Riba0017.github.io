@@ -1,0 +1,18 @@
+@import "../variables";
+
+.card__header {
+  padding: 20px 0 10px;
+
+  @media all and (max-width: $tablet-width - 1) {
+    &--desktop {
+      display: none;
+    }
+  }
+
+  @media all and (min-width: $tablet-width) {
+    padding-top: 0;
+    &--mobile {
+      display: none;
+    }
+  }
+}

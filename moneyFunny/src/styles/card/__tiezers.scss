@@ -1,0 +1,11 @@
+
+.card__tiezers {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+
+  @media all and (min-width: 1024px) {
+    justify-content: flex-start;
+  }
+}

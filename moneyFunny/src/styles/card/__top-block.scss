@@ -1,0 +1,11 @@
+@import "../variables";
+
+.card__top-block {
+  @media all and (min-width: $tablet-width) {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+  }
+}

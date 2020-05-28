@@ -1,0 +1,16 @@
+@import "../variables";
+
+
+.tabs__content {
+  max-height: 0;
+  padding: 0 15px;
+  color: $font-black;
+  background: #FFFFFF;
+  transition: $transition;
+
+  @media all and (min-width: $tablet-width) {
+    height: 100%;
+    max-height: 100%;
+    padding: 0 0 15px;
+  }
+}

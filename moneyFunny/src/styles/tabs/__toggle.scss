@@ -1,0 +1,18 @@
+
+
+.tabs__toggle {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+
+  &:checked {
+    + .tabs__label::after {
+      top: 20px;
+      transform: rotate(225deg);
+    }
+    ~ .tabs__content {
+      max-height: 100vh;
+      padding: 0 15px 15px;
+    }
+  }
+}

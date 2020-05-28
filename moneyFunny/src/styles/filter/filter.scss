@@ -1,0 +1,14 @@
+@import "../variables";
+@import "_text";
+@import "_select";
+@import "_title";
+@import "_content";
+@import "_input";
+@import "_label";
+
+.filter {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}

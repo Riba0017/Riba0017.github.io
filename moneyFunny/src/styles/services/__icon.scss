@@ -1,0 +1,22 @@
+
+
+.services__icon {
+  display: inline-block;
+  width: 100%;
+  max-width: 26px;
+  height: 16px;
+
+  &:not(:last-of-type) {
+    margin-right: 17px;
+  }
+
+  &--cashback {
+      background: transparent url("./images/icons/arrow.svg") center no-repeat;
+  }
+  &--clock {
+    background: transparent url("./images/icons/clock.svg") center no-repeat;
+  }
+  &--delivery {
+    background: transparent url("./images/icons/delivery.svg") center no-repeat;
+  }
+}

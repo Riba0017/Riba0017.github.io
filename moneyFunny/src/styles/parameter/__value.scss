@@ -1,0 +1,13 @@
+@import "../variables";
+
+.parameter__value {
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: $font-black;
+
+  &--attention {
+    font-weight: 900;
+  }
+}

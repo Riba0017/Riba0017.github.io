@@ -1,0 +1,9 @@
+@import "_star";
+@import "_reviews";
+
+.rating {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 10px 0;
+}

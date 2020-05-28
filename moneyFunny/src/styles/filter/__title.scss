@@ -1,0 +1,36 @@
+@import "../variables";
+
+.filter__title {
+  margin: 0 0 0 5px;
+  font-size: 13px;
+  line-height: 16px;
+  color: $text-blue;
+  border-bottom: 1px dashed $text-blue;
+  cursor: pointer;
+  transition: $transition;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    width: 5px;
+    height: 5px;
+    border: 1px solid transparent;
+    border-right-color: $text-blue;
+    border-bottom-color: $text-blue;
+    transform: rotate(45deg);
+    transition: $transition;
+  }
+
+  &:hover {
+    color: $text-hover-green;
+    border-bottom-color: $text-hover-green;
+
+    &::after {
+      border-right-color: $text-hover-green;
+      border-bottom-color: $text-hover-green;
+    }
+  }
+}

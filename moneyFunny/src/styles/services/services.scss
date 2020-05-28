@@ -1,0 +1,14 @@
+@import "../variables";
+@import "_icon";
+
+.services {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+
+  @media all and (max-width: $tablet-width) {
+    display: none;
+  }
+}

@@ -1,0 +1,28 @@
+
+@import "../variables";
+
+.filter__input {
+  display: none;
+
+  &:checked + .filter__label {
+    color: $extra-info;
+  }
+  &:checked + .filter__label::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 30px;
+    display: inline-block;
+    width: 5px;
+    height: 10px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    border-bottom-color: #ADB4BF;
+    border-right-color: #ADB4BF;
+    transform: rotate(45deg);
+  }
+  &:disabled + .filter__label {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}

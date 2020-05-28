@@ -1,0 +1,9 @@
+@import "../variables";
+
+.card__info {
+  order: 2;
+
+  @media all and (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
+}
