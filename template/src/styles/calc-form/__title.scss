@@ -1,0 +1,12 @@
+@import "../variables";
+
+.calc-form__title {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #0099de;
+  font-weight: bold;
+
+  @media all and(min-width: $medium-width) {
+    font-size: 30px;
+  }
+}

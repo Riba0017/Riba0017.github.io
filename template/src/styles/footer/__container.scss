@@ -1,0 +1,9 @@
+@import "../variables";
+
+.footer__container {
+  padding: 57px 10px 45px;
+
+  @media all and (min-width: $tablet-width) {
+    padding: 57px 0 45px;
+  }
+}

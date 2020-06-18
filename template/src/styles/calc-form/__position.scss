@@ -1,0 +1,14 @@
+@import "../variables";
+
+.calc-form__position {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 40px;
+  color: #000000;
+  font-weight: bold;
+
+  @media all and(min-width: $medium-width) {
+    margin-top: 50px;
+    font-size: 24px;
+  }
+}

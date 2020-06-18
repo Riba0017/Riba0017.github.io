@@ -1,0 +1,21 @@
+@import "../variables";
+
+.calc-form__button {
+  width: 100%;
+  max-width: 280px;
+  padding: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  background-color: #9da3d7;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background-color: #9298ce;
+  }
+}

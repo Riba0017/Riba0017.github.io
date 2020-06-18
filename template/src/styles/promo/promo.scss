@@ -1,0 +1,25 @@
+@import "../variables";
+@import "_title";
+@import "_form";
+@import "_text";
+@import "_input";
+@import "_button";
+@import "_message";
+@import "_modal";
+
+
+.promo {
+  position: relative;
+  @include flex-cn;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+  max-width: 358px;
+  min-height: inherit;
+  height: 100%;
+  margin: 0 auto;
+
+  @media all and (min-width: 550px) {
+    margin-left: 95px;
+  }
+}

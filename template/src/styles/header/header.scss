@@ -1,0 +1,11 @@
+@import "_container";
+@import "_contacts";
+@import "_phone";
+@import "_logo";
+@import "_promo";
+
+
+.header {
+  flex: 0 0 auto;
+  background-color: #dcdcdc;
+}

@@ -1,0 +1,17 @@
+
+
+.calc-form__user-phone {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 0 10px 0;
+  padding: 14px 20px 10px 55px;
+  font-size: 18px;
+  color: #424242;
+  background-color: #c6c6c6;
+  border: none;
+  border-radius: 10px;
+
+  @media all and (min-width: 645px) {
+    margin: 0 20px 0 0;
+  }
+}

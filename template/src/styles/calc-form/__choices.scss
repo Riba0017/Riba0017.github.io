@@ -1,0 +1,6 @@
+@import "../variables";
+
+.calc-form__choices {
+  @include flex-rw;
+  align-items: center;
+}

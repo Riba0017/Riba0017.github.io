@@ -1,0 +1,14 @@
+@import "../variables";
+
+.calculator__title {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #9da3d7;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media all and (min-width: $medium-width) {
+    font-size: 24px;
+  }
+}

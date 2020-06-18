@@ -1,0 +1,11 @@
+@import "../variables";
+
+.calc-form__calculation {
+  @include flex-rw;
+  justify-content: space-between;
+  width: 100%;
+  
+  @media all and (max-width: 900px) {
+    justify-content: center;
+  }
+}

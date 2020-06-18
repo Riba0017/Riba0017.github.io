@@ -1,0 +1,16 @@
+
+.calc-form__size-label {
+  position: absolute;
+  top: -35px;
+  font-size: 20px;
+  line-height: 37px;
+  color: #000000;
+  text-align: center;
+
+  &--left {
+    left: 25px;
+  }
+  &--right {
+    right: 25px;
+  }
+}

@@ -1,0 +1,13 @@
+@import "../variables";
+
+.header__phone {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  color: #767676;
+
+  @media all and (min-width: $medium-width) {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}

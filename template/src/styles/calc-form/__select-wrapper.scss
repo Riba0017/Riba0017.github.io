@@ -1,0 +1,33 @@
+
+
+.calc-form__select-wrapper {
+  position:relative;
+  width: 100%;
+  max-width: 350px;
+
+  &::after {
+    content:'';
+    position:absolute;
+    top: 5px;
+    right: 15px;
+    display: inline-block;
+    border: 10px solid #aeaeae;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg) skew(10deg, 10deg);
+    pointer-events:none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 1px;
+    top: 2px;
+    display: block;
+    width: 27px;
+    height: 40px;
+    background: #fff;
+    pointer-events: none;
+    border-radius: 4px;
+  }
+}

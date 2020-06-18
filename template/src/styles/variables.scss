@@ -1,0 +1,22 @@
+
+//colors
+
+//vars
+
+$transition: all ease 0.5s 0s;
+$medium-width: 768px;
+$tablet-width: 1024px;
+
+//mixins
+@mixin flex-cn {
+  display: flex;
+  flex-flow: column nowrap;
+}
+@mixin flex-rn {
+  display: flex;
+  flex-flow: row nowrap;
+}
+@mixin flex-rw {
+  display: flex;
+  flex-flow: row wrap;
+}

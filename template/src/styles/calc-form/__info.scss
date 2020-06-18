@@ -1,0 +1,9 @@
+@import "../variables";
+
+.calc-form__info {
+  padding: 30px 30px 30px 0;
+
+  @media all and (max-width: $medium-width) {
+    width: 100%;
+  }
+}

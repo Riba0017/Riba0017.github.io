@@ -1,0 +1,16 @@
+@import "../variables";
+
+.header__container {
+  @include flex-rw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 10px;
+
+  @media all and (min-width: $medium-width) {
+    padding: 65px 10px;
+  }
+
+  @media all and (min-width: $tablet-width) {
+    padding: 65px 0;
+  }
+}

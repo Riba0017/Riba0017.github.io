@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    <title>Template</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__container">
+        <div class="header__logo">
+            <img src="./images/logo.png" alt="Самая офигенная компания" class="header__image" width="273" height="100">
+        </div>
+        <div class="header__contacts">
+            <a href="tel:+74997777777" class="header__phone">+7(499) 777-77-77</a>
+            <a href="tel:+74997777777" class="header__phone">+7(499) 777-77-77</a>
+        </div>
+    </div>
+    <section class="header__promo">
+        <div class="container">
+            <div class="promo">
+                <h2 class="promo__title">форма с кнопкой</h2>
+                <form class="promo__form" action="#" method="post">
+                    <p class="promo__text">оставь телефон и получи что-то офигенное</p>
+                    <input type="tel" name="phone" pattern="" maxlength="13" required
+                           class="promo__input js-promo__input" placeholder="Введите номер">
+                    <button type="submit" class="promo__button js-promo__button">получить</button>
+                </form>
+                <div class="promo__modal js-promo__modal">
+                    <p class="promo__message js-promo__message">Ваше сообщение было отправлено!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+
+<div class="separator"></div>
+<main class="main">
+    <div class="container main__container">
+        <div class="slider">
+            <h2 class="slider__title">Тут у нас слайдер</h2>
+            <div class="slider__wrapper">
+                <input class="slider__input" type="radio" id="i1" name="images" checked/>
+                <input class="slider__input" type="radio" id="i2" name="images" />
+                <input class="slider__input" type="radio" id="i3" name="images" />
+
+                <div class="slider__slide" id="one">
+                    <img class="slider__image" src="./images/slide_1.png" width="690" height="285" alt="slide 1">
+                </div>
+
+                <div class="slider__slide" id="two">
+                    <img class="slider__image" src="./images/slide_2.png" width="690" height="285" alt="slide 2">
+                </div>
+
+                <div class="slider__slide" id="three">
+                    <img class="slider__image" src="./images/slide_3.png" width="690" height="285" alt="slide 3">
+                </div>
+
+                <div id="nav_slide" class="slider__dots">
+                    <label for="i1" class="slider__dot" id="dot1"></label>
+                    <label for="i2" class="slider__dot" id="dot2"></label>
+                    <label for="i3" class="slider__dot" id="dot3"></label>
+                </div>
+            </div>
+        </div>
+        <div class="text-block">
+            <h2 class="text-block__title">просто текстовый блок</h2>
+            <p class="text-block__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Animi commodi ducimus ea incidunt magnam maxime perspiciatis. Consequatur,
+                libero, nemo. Alias?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid aspernatur
+                blanditiis commodi deleniti doloribus earum eligendi error eveniet expedita fuga
+                fugiat illum inventore ipsam itaque laudantium magni maxime minima, molestias nam
+                natus nesciunt, nobis nulla, obcaecati officia perferendis perspiciatis quaerat
+                quidem quod reprehenderit sed sequi sit tempore? Aliquid dolor esse itaque libero
+                mollitia necessitatibus soluta tempore veritatis? Accusantium hic id itaque minima n
+                emo nihil provident sed, vel? Accusamus, aliquam cum dicta dignissimos distinctio
+                enim ex explicabo fugit ipsa magni, maiores nostrum numquam officia ratione
+                repellendus sed suscipit, tempora tempore voluptas voluptates. Asperiores b
+                landitiis dignissimos incidunt iusto praesentium, ullam voluptate!
+            </p>
+        </div>
+        <div class="calculator">
+            <h2 class="calculator__title">Калькулятор</h2>
+            <p class="calculator__title">(стоимость пользователь узнает по телефону)</p>
+
+            <div class="calculator__tabs tabs">
+                <input class="tabs__input" id="tab1" type="radio" name="tabs" checked>
+                <label class="tabs__label" for="tab1" title="Одностворчатое">Одностворчатое</label>
+
+                <input class="tabs__input" id="tab2" type="radio" name="tabs">
+                <label class="tabs__label" for="tab2" title="Двухстворчатое">Двухстворчатое</label>
+
+                <input class="tabs__input" id="tab3" type="radio" name="tabs">
+                <label class="tabs__label" for="tab3" title="Трехстворчатое">Трехстворчатое</label>
+
+                <input class="tabs__input" id="tab4" type="radio" name="tabs">
+                <label class="tabs__label" for="tab4" title="Балконный блок">Балконный&nbsp;блок</label>
+
+                <input class="tabs__input" id="tab5" type="radio" name="tabs">
+                <label class="tabs__label" for="tab5" title="Остекление балкона">Остекление&nbsp;балкона</label>
+
+                <section id="content1" class="tabs__content">
+                    <form action="#" class="calc-form">
+                        <div class="calc-form__calculation">
+                            <section class="calc-form__view">
+                                <span class="calc-form__height-size">высота</span>
+                                <span class="calc-form__width-size">ширина</span>
+                                <img class="calc-form__image" src="./images/icons/window_1.png" alt="window 1" width="100" height="160">
+                                <div class="calc-form__sizes">
+                                    <label for="width_1" class="calc-form__size-label calc-form__size-label--left">ширина,см</label>
+                                    <input id="width_1" class="calc-form__size-input" type="number" maxlength="3">
+                                    <span class="calc-form__label-divider">X</span>
+                                    <label for="height_1" class="calc-form__size-label calc-form__size-label--right">высота,см</label>
+                                    <input id="height_1" class="calc-form__size-input" type="number" maxlength="3">
+                                </div>
+                            </section>
+                            <section class="calc-form__info">
+                                <p class="calc-form__title">Одностворчатое окно KBE</p>
+                                <p class="calc-form__position">1. Критерий выбора</p>
+                                <div class="calc-form__choices">
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 1</label>
+
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 2</label>
+
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 3</label>
+                                </div>
+                                <p class="calc-form__position">2. Выберите открывание створки</p>
+                                <div class="calc-form__select-wrapper">
+                                    <select name="select" class="calc-form__select">
+                                        <option class="calc-form__option" value="value1" selected>Не открывается</option>
+                                        <option class="calc-form__option" value="value2">Открывается вверх</option>
+                                        <option class="calc-form__option" value="value3">Открывается вправо</option>
+                                    </select>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="calc-form__user-info">
+                            <label for="user-phone_1" class="calc-form__user"></label>
+                            <input id="user-phone_1" type="tel" name="phone" pattern="" maxlength="13" required
+                                   class="calc-form__user-phone" placeholder="Введите номер">
+                            <button type="submit" class="calc-form__button">рассчитать</button>
+                        </div>
+                    </form>
+                </section>
+                <section id="content2" class="tabs__content">
+                    <form action="#" class="calc-form">
+                        <div class="calc-form__calculation">
+                            <section class="calc-form__view">
+                                <span class="calc-form__height-size">высота</span>
+                                <span class="calc-form__width-size">ширина</span>
+                                <img class="calc-form__image calc-form__image--double" src="./images/icons/window_2.png" alt="window 1" height="160">
+                                <div class="calc-form__sizes">
+                                    <label for="width_2" class="calc-form__size-label calc-form__size-label--left">ширина,см</label>
+                                    <input id="width_2" class="calc-form__size-input" type="number" maxlength="3">
+                                    <span class="calc-form__label-divider">X</span>
+                                    <label for="height_2" class="calc-form__size-label calc-form__size-label--right">высота,см</label>
+                                    <input id="height_2" class="calc-form__size-input" type="number" maxlength="3">
+                                </div>
+                            </section>
+                            <section class="calc-form__info">
+                                <p class="calc-form__title">Двухстворчатое окно KBE</p>
+                                <p class="calc-form__position">1. Критерий выбора</p>
+                                <div class="calc-form__choices">
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 1</label>
+
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 2</label>
+
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 3</label>
+                                </div>
+                                <p class="calc-form__position">2. Выберите открывание створки</p>
+                                <div class="calc-form__select-wrapper">
+                                    <select name="select" class="calc-form__select">
+                                        <option class="calc-form__option" value="value1" selected>Не открывается</option>
+                                        <option class="calc-form__option" value="value2">Открывается вверх</option>
+                                        <option class="calc-form__option" value="value3">Открывается вправо</option>
+                                    </select>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="calc-form__user-info">
+                            <label for="user-phone_2" class="calc-form__user"></label>
+                            <input id="user-phone_2" type="tel" name="phone" pattern="" maxlength="13" required
+                                   class="calc-form__user-phone" placeholder="Введите номер">
+                            <button type="submit" class="calc-form__button">рассчитать</button>
+                        </div>
+                    </form>
+                </section>
+                <section id="content3" class="tabs__content">
+                    <form action="#" class="calc-form">
+                        <div class="calc-form__calculation">
+                            <section class="calc-form__view">
+                                <span class="calc-form__height-size">высота</span>
+                                <span class="calc-form__width-size">ширина</span>
+                                <img class="calc-form__image calc-form__image--triple" src="./images/icons/window_3.png" alt="window 3" height="160">
+                                <div class="calc-form__sizes">
+                                    <label for="width_3" class="calc-form__size-label calc-form__size-label--left">ширина,см</label>
+                                    <input id="width_3" class="calc-form__size-input" type="number" maxlength="3">
+                                    <span class="calc-form__label-divider">X</span>
+                                    <label for="height_3" class="calc-form__size-label calc-form__size-label--right">высота,см</label>
+                                    <input id="height_3" class="calc-form__size-input" type="number" maxlength="3">
+                                </div>
+                            </section>
+                            <section class="calc-form__info">
+                                <p class="calc-form__title">Трехстворчатое окно KBE</p>
+                                <p class="calc-form__position">1. Критерий выбора</p>
+                                <div class="calc-form__choices">
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 1</label>
+
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 2</label>
+
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 3</label>
+                                </div>
+                                <p class="calc-form__position">2. Выберите открывание створки</p>
+                                <div class="calc-form__select-wrapper">
+                                    <select name="select" class="calc-form__select">
+                                        <option class="calc-form__option" value="value1" selected>Не открывается</option>
+                                        <option class="calc-form__option" value="value2">Открывается вверх</option>
+                                        <option class="calc-form__option" value="value3">Открывается вправо</option>
+                                    </select>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="calc-form__user-info">
+                            <label for="user-phone_3" class="calc-form__user"></label>
+                            <input id="user-phone_3" type="tel" name="phone" pattern="" maxlength="13" required
+                                   class="calc-form__user-phone" placeholder="Введите номер">
+                            <button type="submit" class="calc-form__button">рассчитать</button>
+                        </div>
+                    </form>
+                </section>
+                <section id="content4" class="tabs__content">
+                    <form action="#" class="calc-form">
+                        <div class="calc-form__calculation">
+                            <section class="calc-form__view">
+                                <span class="calc-form__height-size">высота</span>
+                                <span class="calc-form__width-size">ширина</span>
+                                <img class="calc-form__image calc-form__image--big" src="./images/icons/window_4.png" alt="window 4" height="160">
+                                <div class="calc-form__sizes">
+                                    <label for="width_4" class="calc-form__size-label calc-form__size-label--left">ширина,см</label>
+                                    <input id="width_4" class="calc-form__size-input" type="number" maxlength="3">
+                                    <span class="calc-form__label-divider">X</span>
+                                    <label for="height_4" class="calc-form__size-label calc-form__size-label--right">высота,см</label>
+                                    <input id="height_4" class="calc-form__size-input" type="number" maxlength="3">
+                                </div>
+                            </section>
+                            <section class="calc-form__info">
+                                <p class="calc-form__title">Балконный&nbsp;блок KBE</p>
+                                <p class="calc-form__position">1. Критерий выбора</p>
+                                <div class="calc-form__choices">
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 1</label>
+
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 2</label>
+
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 3</label>
+                                </div>
+                                <p class="calc-form__position">2. Выберите открывание створки</p>
+                                <div class="calc-form__select-wrapper">
+                                    <select name="select" class="calc-form__select">
+                                        <option class="calc-form__option" value="value1" selected>Не открывается</option>
+                                        <option class="calc-form__option" value="value2">Открывается вверх</option>
+                                        <option class="calc-form__option" value="value3">Открывается вправо</option>
+                                    </select>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="calc-form__user-info">
+                            <label for="user-phone_4" class="calc-form__user"></label>
+                            <input id="user-phone_4" type="tel" name="phone" pattern="" maxlength="13" required
+                                   class="calc-form__user-phone" placeholder="Введите номер">
+                            <button type="submit" class="calc-form__button">рассчитать</button>
+                        </div>
+                    </form>
+                </section>
+                <section id="content5" class="tabs__content">
+                    <form action="#" class="calc-form">
+                        <div class="calc-form__calculation">
+                            <section class="calc-form__view">
+                                <span class="calc-form__height-size">высота</span>
+                                <span class="calc-form__width-size">ширина</span>
+                                <img class="calc-form__image calc-form__image--big" src="./images/icons/balcony.png" alt="balcony" height="160">
+                                <div class="calc-form__sizes">
+                                    <label for="width_5" class="calc-form__size-label calc-form__size-label--left">ширина,см</label>
+                                    <input id="width_5" class="calc-form__size-input" type="number" maxlength="3">
+                                    <span class="calc-form__label-divider">X</span>
+                                    <label for="height_5" class="calc-form__size-label calc-form__size-label--right">высота,см</label>
+                                    <input id="height_5" class="calc-form__size-input" type="number" maxlength="3">
+                                </div>
+                            </section>
+                            <section class="calc-form__info">
+                                <p class="calc-form__title">Остекление&nbsp;балкона KBE</p>
+                                <p class="calc-form__position">1. Критерий выбора</p>
+                                <div class="calc-form__choices">
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 1</label>
+
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 2</label>
+
+                                    <label class="calc-form__choice-label">
+                                        <input type="radio" name="choice" class="calc-form__choice">
+                                        пункт выбора 3</label>
+                                </div>
+                                <p class="calc-form__position">2. Выберите открывание створки</p>
+                                <div class="calc-form__select-wrapper">
+                                    <select name="select" class="calc-form__select">
+                                        <option class="calc-form__option" value="value1" selected>Не открывается</option>
+                                        <option class="calc-form__option" value="value2">Открывается вверх</option>
+                                        <option class="calc-form__option" value="value3">Открывается вправо</option>
+                                    </select>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="calc-form__user-info">
+                            <label for="user-phone_5" class="calc-form__user"></label>
+                            <input id="user-phone_5" type="tel" name="phone" pattern="" maxlength="13" required
+                                   class="calc-form__user-phone" placeholder="Введите номер">
+                            <button type="submit" class="calc-form__button">рассчитать</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container footer__container">
+        <p class="footer__text">просто<br>скромный футер</p>
+    </div>
+</footer>
+
+</body>
+</html>

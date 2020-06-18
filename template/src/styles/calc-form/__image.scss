@@ -1,0 +1,23 @@
+
+
+.calc-form__image {
+  margin: 55px 75px 55px 35%;
+  @media all and (max-width: 500px) {
+    margin: 55px 0 55px 35%;
+  }
+
+  &--double,
+  &--big {
+    margin: 55px 75px 55px 25%;
+    @media all and (max-width: 500px) {
+      margin: 55px 0 55px 25%;
+    }
+  }
+  &--triple {
+    margin: 55px 75px 55px 20%;
+    @media all and (max-width: 500px) {
+      height: 120px;
+      margin: 55px 0 55px 20%;
+    }
+  }
+}

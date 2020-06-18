@@ -1,0 +1,67 @@
+@import "../variables";
+
+.tabs__label {
+  display: inline-block;
+  width: calc(100% / 5.5);
+  margin: 0 0 -1px;
+  font-size: 14px;
+  line-height: 25px;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+
+  @media screen and (max-width: $tablet-width) {
+      padding: 15px;
+  }
+  @media screen and (min-width: $medium-width) {
+    width: calc(100% / 5.5);
+    line-height: 45px;
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+  @media all and (min-width: $tablet-width) {
+    & {
+      width: 195px;
+      padding: 15px 25px;
+
+
+    }
+
+    &:hover {
+      color: #0099de;
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100px;
+      margin: 0 auto;
+    }
+    &[for*="1"]::before {
+      background: transparent url("./images/icons/window_1.png") center no-repeat;
+      background-size: contain;
+    }
+    &[for*="2"]::before {
+      background: transparent url("./images/icons/window_2.png") center no-repeat;
+      background-size: contain;
+    }
+    &[for*="3"]::before {
+      background: transparent url("./images/icons/window_3.png") center no-repeat;
+      background-size: contain;
+    }
+    &[for*="4"]::before {
+      background: transparent url("./images/icons/window_4.png") center no-repeat;
+      background-size: contain;
+    }
+    &[for*="5"]::before {
+      background: transparent url("./images/icons/balcony.png") center no-repeat;
+      background-size: contain;
+    }
+  }
+}

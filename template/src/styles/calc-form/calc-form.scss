@@ -1,0 +1,32 @@
+@import "../variables";
+@import "_calculation";
+@import "_view";
+@import "_info";
+@import "_user-info";
+@import "_height-size";
+@import "_width-size";
+@import "_image";
+@import "_sizes";
+@import "_size-input";
+@import "_size-label";
+@import "_label-divider";
+@import "_title";
+@import "_position";
+@import "_choice-label";
+@import "_choices";
+@import "_choice";
+@import "_select";
+@import "_select-wrapper";
+@import "_user-phone";
+@import "_user";
+@import "_button";
+
+
+.calc-form {
+  @include flex-cn;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px 0 rgba(0,0,0,0.34);
+}

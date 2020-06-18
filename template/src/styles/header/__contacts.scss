@@ -1,0 +1,14 @@
+@import "../variables";
+
+.header__contacts {
+  @include flex-cn;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 10px 0;
+
+  @media all and (min-width: 550px) {
+    align-items: flex-end;
+    margin: 0;
+  }
+}

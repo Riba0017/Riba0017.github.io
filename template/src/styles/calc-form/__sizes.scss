@@ -1,0 +1,11 @@
+@import "../variables";
+
+.calc-form__sizes {
+  position: relative;
+  @include flex-rn;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
